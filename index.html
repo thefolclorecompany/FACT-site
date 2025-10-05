@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FACT - Foundation Against Counterfeit Trade</title>
+    <title data-translate="meta.title">FACT - Foundation Against Counterfeit Trade</title>
     <style>
         * {
             margin: 0;
@@ -12,14 +12,15 @@
         }
 
         :root {
-            --primary: #1a1a2e;
-            --secondary: #16213e;
-            --accent: #0f4c75;
-            --highlight: #3282b8;
+            --primary: #000000;
+            --secondary: #111111;
+            --accent: #1a1a1a;
+            --highlight: #ffffff;
             --text: #ffffff;
-            --text-light: #a8b2d1;
-            --success: #00d4aa;
-            --warning: #ff6b6b;
+            --text-light: #cccccc;
+            --success: #00ff88;
+            --warning: #ff4444;
+            --border: #333333;
         }
 
         body {
@@ -34,8 +35,9 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(26, 26, 46, 0.95);
+            background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
             z-index: 1000;
             padding: 1rem 0;
             transition: all 0.3s ease;
@@ -53,15 +55,15 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            background: linear-gradient(45deg, var(--highlight), var(--success));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--highlight);
+            letter-spacing: 2px;
         }
 
         .nav-links {
             display: flex;
             gap: 2rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
@@ -72,6 +74,34 @@
 
         .nav-links a:hover {
             color: var(--highlight);
+        }
+
+        /* Language Selector */
+        .language-selector {
+            position: relative;
+            margin-left: 1rem;
+        }
+
+        .language-dropdown {
+            background: var(--accent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.5rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+
+        .language-dropdown:hover {
+            background: var(--secondary);
+            border-color: var(--highlight);
+        }
+
+        .language-dropdown:focus {
+            outline: none;
+            border-color: var(--highlight);
         }
 
         /* Hero Section */
@@ -96,9 +126,8 @@
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
             line-height: 1.2;
-            background: linear-gradient(45deg, var(--text), var(--highlight));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--highlight);
+            font-weight: 300;
             animation: fadeInUp 0.8s ease;
         }
 
@@ -125,24 +154,27 @@
         }
 
         .btn-primary {
-            background: linear-gradient(45deg, var(--highlight), var(--success));
-            color: var(--text);
-            box-shadow: 0 10px 30px rgba(50, 130, 184, 0.3);
+            background: var(--highlight);
+            color: var(--primary);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+            font-weight: 600;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(50, 130, 184, 0.4);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+            background: var(--text-light);
         }
 
         .btn-secondary {
             border: 2px solid var(--highlight);
             color: var(--highlight);
+            background: transparent;
         }
 
         .btn-secondary:hover {
             background: var(--highlight);
-            color: var(--text);
+            color: var(--primary);
         }
 
         .hero-visual {
@@ -153,9 +185,9 @@
         .nfc-demo {
             width: 300px;
             height: 400px;
-            background: linear-gradient(135deg, rgba(50, 130, 184, 0.1), rgba(0, 212, 170, 0.1));
+            background: var(--accent);
             border-radius: 20px;
-            border: 2px solid rgba(50, 130, 184, 0.3);
+            border: 2px solid var(--border);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -174,14 +206,14 @@
             position: absolute;
             width: 100%;
             height: 3px;
-            background: linear-gradient(90deg, transparent, var(--success), transparent);
+            background: linear-gradient(90deg, transparent, var(--highlight), transparent);
             animation: scan 3s linear infinite;
         }
 
         /* Features Section */
         .features {
             padding: 5rem 2rem;
-            background: rgba(22, 33, 62, 0.5);
+            background: var(--secondary);
         }
 
         .features-container {
@@ -202,8 +234,8 @@
         }
 
         .feature-card {
-            background: rgba(15, 76, 117, 0.2);
-            border: 1px solid rgba(50, 130, 184, 0.3);
+            background: var(--accent);
+            border: 1px solid var(--border);
             border-radius: 15px;
             padding: 2rem;
             transition: all 0.3s ease;
@@ -211,8 +243,9 @@
 
         .feature-card:hover {
             transform: translateY(-5px);
-            background: rgba(15, 76, 117, 0.3);
-            box-shadow: 0 10px 30px rgba(50, 130, 184, 0.2);
+            background: var(--secondary);
+            border-color: var(--highlight);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
         }
 
         .feature-icon {
@@ -248,7 +281,8 @@
         .step-number {
             width: 60px;
             height: 60px;
-            background: linear-gradient(45deg, var(--highlight), var(--success));
+            background: var(--highlight);
+            color: var(--primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -265,7 +299,7 @@
             left: 60%;
             width: calc(100% - 60%);
             height: 2px;
-            background: linear-gradient(90deg, var(--highlight), transparent);
+            background: linear-gradient(90deg, var(--border), transparent);
         }
 
         .step:last-child::after {
@@ -275,7 +309,7 @@
         /* Benefits Section */
         .benefits {
             padding: 5rem 2rem;
-            background: rgba(22, 33, 62, 0.5);
+            background: var(--secondary);
         }
 
         .benefits-grid {
@@ -288,18 +322,18 @@
 
         .benefit-card {
             padding: 1.5rem;
-            border-left: 3px solid var(--success);
+            border-left: 3px solid var(--highlight);
             transition: all 0.3s ease;
         }
 
         .benefit-card:hover {
             transform: translateX(10px);
-            border-left-color: var(--highlight);
+            border-left-color: var(--success);
         }
 
         .benefit-title {
             font-size: 1.25rem;
-            color: var(--success);
+            color: var(--highlight);
             margin-bottom: 0.5rem;
         }
 
@@ -308,7 +342,7 @@
             padding: 3rem 2rem;
             text-align: center;
             background: var(--primary);
-            border-top: 1px solid rgba(50, 130, 184, 0.2);
+            border-top: 1px solid var(--border);
         }
 
         .footer-content {
@@ -374,11 +408,20 @@
         <div class="nav-container">
             <div class="logo">FACT</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-translate="nav.home">Home</a></li>
+                <li><a href="#features" data-translate="nav.features">Features</a></li>
+                <li><a href="#how-it-works" data-translate="nav.howItWorks">How It Works</a></li>
+                <li><a href="#benefits" data-translate="nav.benefits">Benefits</a></li>
+                <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
+                <li>
+                    <div class="language-selector">
+                        <select id="languageSelect" class="language-dropdown">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="pt">🇵🇹 Português</option>
+                            <option value="fr">🇫🇷 Français</option>
+                        </select>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -387,18 +430,18 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Verify Authenticity with a Simple Tap</h1>
-                <p>Combat counterfeit alcohol with blockchain-verified NFC technology. Protect consumers, brands, and governments with instant authentication.</p>
+                <h1 data-translate="hero.title">Verify Authenticity with a Simple Tap</h1>
+                <p data-translate="hero.subtitle">Combat counterfeit alcohol with blockchain-verified NFC technology. Protect consumers, brands, and governments with instant authentication.</p>
                 <div class="cta-buttons">
-                    <a href="#how-it-works" class="btn btn-primary">Learn More</a>
-                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                    <a href="#how-it-works" class="btn btn-primary" data-translate="hero.learnMore">Learn More</a>
+                    <a href="mailto:info@fightcounterfeits.org" class="btn btn-secondary" data-translate="hero.getStarted">Get Started</a>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="nfc-demo">
                     <div class="nfc-icon">📱</div>
                     <div style="font-size: 2rem; margin-bottom: 1rem;">🍾</div>
-                    <div style="color: var(--success); font-weight: bold;">✓ Verified Authentic</div>
+                    <div style="color: var(--success); font-weight: bold;" data-translate="hero.verified">✓ Verified Authentic</div>
                     <div class="scan-effect"></div>
                 </div>
             </div>
@@ -408,37 +451,37 @@
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="features-container">
-            <h2 class="section-title">Key Features</h2>
+            <h2 class="section-title" data-translate="features.title">Key Features</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <span class="feature-icon">🔒</span>
-                    <h3 class="feature-title">Tamper-Evident</h3>
-                    <p>Physical and digital security ensures any tampering attempt is immediately detected and recorded.</p>
+                    <h3 class="feature-title" data-translate="features.tamperEvident.title">Tamper-Evident</h3>
+                    <p data-translate="features.tamperEvident.description">Physical and digital security ensures any tampering attempt is immediately detected and recorded.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">🔐</span>
-                    <h3 class="feature-title">Blockchain Verified</h3>
-                    <p>Every scan is authenticated through immutable blockchain technology, ensuring complete transparency.</p>
+                    <h3 class="feature-title" data-translate="features.blockchain.title">Blockchain Verified</h3>
+                    <p data-translate="features.blockchain.description">Every scan is authenticated through immutable blockchain technology, ensuring complete transparency.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">📱</span>
-                    <h3 class="feature-title">No App Required</h3>
-                    <p>Works with any NFC-enabled smartphone. Just tap and verify - no downloads necessary.</p>
+                    <h3 class="feature-title" data-translate="features.noApp.title">No App Required</h3>
+                    <p data-translate="features.noApp.description">Works with any NFC-enabled smartphone. Just tap and verify - no downloads necessary.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">🌐</span>
-                    <h3 class="feature-title">Global Tracking</h3>
-                    <p>Real-time monitoring detects suspicious patterns and fraud attempts across the supply chain.</p>
+                    <h3 class="feature-title" data-translate="features.globalTracking.title">Global Tracking</h3>
+                    <p data-translate="features.globalTracking.description">Real-time monitoring detects suspicious patterns and fraud attempts across the supply chain.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">📊</span>
-                    <h3 class="feature-title">Analytics Dashboard</h3>
-                    <p>Comprehensive data insights for brands and authorities to track distribution and compliance.</p>
+                    <h3 class="feature-title" data-translate="features.analytics.title">Analytics Dashboard</h3>
+                    <p data-translate="features.analytics.description">Comprehensive data insights for brands and authorities to track distribution and compliance.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">♾️</span>
-                    <h3 class="feature-title">Lifetime Durability</h3>
-                    <p>Passive NFC chips require no battery and last indefinitely, ensuring long-term protection.</p>
+                    <h3 class="feature-title" data-translate="features.durability.title">Lifetime Durability</h3>
+                    <p data-translate="features.durability.description">Passive NFC chips require no battery and last indefinitely, ensuring long-term protection.</p>
                 </div>
             </div>
         </div>
@@ -447,27 +490,27 @@
     <!-- How It Works Section -->
     <section id="how-it-works" class="how-it-works">
         <div class="features-container">
-            <h2 class="section-title">How It Works</h2>
+            <h2 class="section-title" data-translate="howItWorks.title">How It Works</h2>
             <div class="steps-container">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Tag Integration</h3>
-                    <p>NFC tags embedded at bottling facility with unique encrypted keys</p>
+                    <h3 data-translate="howItWorks.step1.title">Tag Integration</h3>
+                    <p data-translate="howItWorks.step1.description">NFC tags embedded at bottling facility with unique encrypted keys</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Consumer Scan</h3>
-                    <p>Simple smartphone tap opens secure verification webpage</p>
+                    <h3 data-translate="howItWorks.step2.title">Consumer Scan</h3>
+                    <p data-translate="howItWorks.step2.description">Simple smartphone tap opens secure verification webpage</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Instant Verification</h3>
-                    <p>Real-time authentication confirms product genuineness</p>
+                    <h3 data-translate="howItWorks.step3.title">Instant Verification</h3>
+                    <p data-translate="howItWorks.step3.description">Real-time authentication confirms product genuineness</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
-                    <h3>Data Logging</h3>
-                    <p>All scans monitored for fraud patterns and alerts</p>
+                    <h3 data-translate="howItWorks.step4.title">Data Logging</h3>
+                    <p data-translate="howItWorks.step4.description">All scans monitored for fraud patterns and alerts</p>
                 </div>
             </div>
         </div>
@@ -476,23 +519,23 @@
     <!-- Benefits Section -->
     <section id="benefits" class="benefits">
         <div class="features-container">
-            <h2 class="section-title">Benefits for All Stakeholders</h2>
+            <h2 class="section-title" data-translate="benefits.title">Benefits for All Stakeholders</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <h3 class="benefit-title">For Consumers</h3>
-                    <p>Peace of mind knowing you're consuming safe, authentic products. Instant verification at your fingertips.</p>
+                    <h3 class="benefit-title" data-translate="benefits.consumers.title">For Consumers</h3>
+                    <p data-translate="benefits.consumers.description">Peace of mind knowing you're consuming safe, authentic products. Instant verification at your fingertips.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3 class="benefit-title">For Brands</h3>
-                    <p>Protect brand reputation, reduce counterfeiting losses, and gain valuable supply chain insights.</p>
+                    <h3 class="benefit-title" data-translate="benefits.brands.title">For Brands</h3>
+                    <p data-translate="benefits.brands.description">Protect brand reputation, reduce counterfeiting losses, and gain valuable supply chain insights.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3 class="benefit-title">For Governments</h3>
-                    <p>Combat illicit trade, improve tax compliance, and enhance public health protection.</p>
+                    <h3 class="benefit-title" data-translate="benefits.governments.title">For Governments</h3>
+                    <p data-translate="benefits.governments.description">Combat illicit trade, improve tax compliance, and enhance public health protection.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3 class="benefit-title">For Retailers</h3>
-                    <p>Verify inventory integrity instantly and build customer trust with authenticated products.</p>
+                    <h3 class="benefit-title" data-translate="benefits.retailers.title">For Retailers</h3>
+                    <p data-translate="benefits.retailers.description">Verify inventory integrity instantly and build customer trust with authenticated products.</p>
                 </div>
             </div>
         </div>
@@ -501,18 +544,389 @@
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-content">
-            <h2 style="margin-bottom: 1rem;">Join the Fight Against Counterfeit Trade</h2>
-            <p style="color: var(--text-light); margin-bottom: 2rem;">
+            <h2 style="margin-bottom: 1rem;" data-translate="footer.title">Join the Fight Against Counterfeit Trade</h2>
+            <p style="color: var(--text-light); margin-bottom: 2rem;" data-translate="footer.subtitle">
                 Partner with FACT to establish a new industry standard where authenticity verification is just a tap away.
             </p>
-            <a href="#" class="btn btn-primary">Contact Us Today</a>
-            <p style="margin-top: 3rem; color: var(--text-light); font-size: 0.9rem;">
+            <a href="mailto:info@fightcounterfeits.org" class="btn btn-primary" data-translate="footer.contactUs">Contact Us Today</a>
+            <p style="margin-top: 3rem; color: var(--text-light); font-size: 0.9rem;" data-translate="footer.copyright">
                 © 2024 Foundation Against Counterfeit Trade. Building a safer, more accountable global alcohol market.
             </p>
         </div>
     </footer>
 
     <script>
+        // Translation object
+        const translations = {
+            en: {
+                meta: {
+                    title: "FACT - Foundation Against Counterfeit Trade"
+                },
+                nav: {
+                    home: "Home",
+                    features: "Features",
+                    howItWorks: "How It Works",
+                    benefits: "Benefits",
+                    contact: "Contact"
+                },
+                hero: {
+                    title: "Verify Authenticity with a Simple Tap",
+                    subtitle: "Combat counterfeit alcohol with blockchain-verified NFC technology. Protect consumers, brands, and governments with instant authentication.",
+                    learnMore: "Learn More",
+                    getStarted: "Get Started",
+                    verified: "✓ Verified Authentic"
+                },
+                features: {
+                    title: "Key Features",
+                    tamperEvident: {
+                        title: "Tamper-Evident",
+                        description: "Physical and digital security ensures any tampering attempt is immediately detected and recorded."
+                    },
+                    blockchain: {
+                        title: "Blockchain Verified",
+                        description: "Every scan is authenticated through immutable blockchain technology, ensuring complete transparency."
+                    },
+                    noApp: {
+                        title: "No App Required",
+                        description: "Works with any NFC-enabled smartphone. Just tap and verify - no downloads necessary."
+                    },
+                    globalTracking: {
+                        title: "Global Tracking",
+                        description: "Real-time monitoring detects suspicious patterns and fraud attempts across the supply chain."
+                    },
+                    analytics: {
+                        title: "Analytics Dashboard",
+                        description: "Comprehensive data insights for brands and authorities to track distribution and compliance."
+                    },
+                    durability: {
+                        title: "Lifetime Durability",
+                        description: "Passive NFC chips require no battery and last indefinitely, ensuring long-term protection."
+                    }
+                },
+                howItWorks: {
+                    title: "How It Works",
+                    step1: {
+                        title: "Tag Integration",
+                        description: "NFC tags embedded at bottling facility with unique encrypted keys"
+                    },
+                    step2: {
+                        title: "Consumer Scan",
+                        description: "Simple smartphone tap opens secure verification webpage"
+                    },
+                    step3: {
+                        title: "Instant Verification",
+                        description: "Real-time authentication confirms product genuineness"
+                    },
+                    step4: {
+                        title: "Data Logging",
+                        description: "All scans monitored for fraud patterns and alerts"
+                    }
+                },
+                benefits: {
+                    title: "Benefits for All Stakeholders",
+                    consumers: {
+                        title: "For Consumers",
+                        description: "Peace of mind knowing you're consuming safe, authentic products. Instant verification at your fingertips."
+                    },
+                    brands: {
+                        title: "For Brands",
+                        description: "Protect brand reputation, reduce counterfeiting losses, and gain valuable supply chain insights."
+                    },
+                    governments: {
+                        title: "For Governments",
+                        description: "Combat illicit trade, improve tax compliance, and enhance public health protection."
+                    },
+                    retailers: {
+                        title: "For Retailers",
+                        description: "Verify inventory integrity instantly and build customer trust with authenticated products."
+                    }
+                },
+                footer: {
+                    title: "Join the Fight Against Counterfeit Trade",
+                    subtitle: "Partner with FACT to establish a new industry standard where authenticity verification is just a tap away.",
+                    contactUs: "Contact Us Today",
+                    copyright: "© 2024 Foundation Against Counterfeit Trade. Building a safer, more accountable global alcohol market."
+                }
+            },
+            pt: {
+                meta: {
+                    title: "FACT - Fundação Contra o Comércio de Falsificações"
+                },
+                nav: {
+                    home: "Início",
+                    features: "Recursos",
+                    howItWorks: "Como Funciona",
+                    benefits: "Benefícios",
+                    contact: "Contato"
+                },
+                hero: {
+                    title: "Verifique a Autenticidade com um Toque Simples",
+                    subtitle: "Combata bebidas alcoólicas falsificadas com tecnologia NFC verificada por blockchain. Proteja consumidores, marcas e governos com autenticação instantânea.",
+                    learnMore: "Saiba Mais",
+                    getStarted: "Começar",
+                    verified: "✓ Verificado Autêntico"
+                },
+                features: {
+                    title: "Principais Recursos",
+                    tamperEvident: {
+                        title: "À Prova de Violação",
+                        description: "Segurança física e digital garante que qualquer tentativa de violação seja imediatamente detectada e registrada."
+                    },
+                    blockchain: {
+                        title: "Verificado por Blockchain",
+                        description: "Cada verificação é autenticada através de tecnologia blockchain imutável, garantindo transparência completa."
+                    },
+                    noApp: {
+                        title: "Sem Aplicativo Necessário",
+                        description: "Funciona com qualquer smartphone habilitado para NFC. Apenas toque e verifique - sem downloads necessários."
+                    },
+                    globalTracking: {
+                        title: "Rastreamento Global",
+                        description: "Monitoramento em tempo real detecta padrões suspeitos e tentativas de fraude em toda a cadeia de suprimentos."
+                    },
+                    analytics: {
+                        title: "Painel de Análises",
+                        description: "Insights abrangentes de dados para marcas e autoridades rastrearem distribuição e conformidade."
+                    },
+                    durability: {
+                        title: "Durabilidade Vitalícia",
+                        description: "Chips NFC passivos não requerem bateria e duram indefinidamente, garantindo proteção de longo prazo."
+                    }
+                },
+                howItWorks: {
+                    title: "Como Funciona",
+                    step1: {
+                        title: "Integração de Tags",
+                        description: "Tags NFC incorporadas na instalação de engarrafamento com chaves criptografadas únicas"
+                    },
+                    step2: {
+                        title: "Verificação do Consumidor",
+                        description: "Toque simples no smartphone abre página web de verificação segura"
+                    },
+                    step3: {
+                        title: "Verificação Instantânea",
+                        description: "Autenticação em tempo real confirma a autenticidade do produto"
+                    },
+                    step4: {
+                        title: "Registro de Dados",
+                        description: "Todas as verificações são monitoradas para padrões de fraude e alertas"
+                    }
+                },
+                benefits: {
+                    title: "Benefícios para Todos os Stakeholders",
+                    consumers: {
+                        title: "Para Consumidores",
+                        description: "Tranquilidade sabendo que você está consumindo produtos seguros e autênticos. Verificação instantânea na ponta dos dedos."
+                    },
+                    brands: {
+                        title: "Para Marcas",
+                        description: "Proteja a reputação da marca, reduza perdas por falsificação e obtenha insights valiosos da cadeia de suprimentos."
+                    },
+                    governments: {
+                        title: "Para Governos",
+                        description: "Combata o comércio ilícito, melhore a conformidade fiscal e aprimore a proteção da saúde pública."
+                    },
+                    retailers: {
+                        title: "Para Varejistas",
+                        description: "Verifique a integridade do estoque instantaneamente e construa confiança do cliente com produtos autenticados."
+                    }
+                },
+                footer: {
+                    title: "Junte-se à Luta Contra o Comércio de Falsificações",
+                    subtitle: "Faça parceria com a FACT para estabelecer um novo padrão da indústria onde a verificação de autenticidade está a apenas um toque de distância.",
+                    contactUs: "Entre em Contato Hoje",
+                    copyright: "© 2024 Fundação Contra o Comércio de Falsificações. Construindo um mercado global de álcool mais seguro e responsável."
+                }
+            },
+            fr: {
+                meta: {
+                    title: "FACT - Fondation Contre le Commerce de Contrefaçons"
+                },
+                nav: {
+                    home: "Accueil",
+                    features: "Fonctionnalités",
+                    howItWorks: "Comment ça Marche",
+                    benefits: "Avantages",
+                    contact: "Contact"
+                },
+                hero: {
+                    title: "Vérifiez l'Authenticité d'un Simple Toucher",
+                    subtitle: "Combattez l'alcool contrefait avec la technologie NFC vérifiée par blockchain. Protégez les consommateurs, les marques et les gouvernements avec une authentification instantanée.",
+                    learnMore: "En Savoir Plus",
+                    getStarted: "Commencer",
+                    verified: "✓ Vérifié Authentique"
+                },
+                features: {
+                    title: "Fonctionnalités Clés",
+                    tamperEvident: {
+                        title: "À l'Épreuve de la Manipulation",
+                        description: "La sécurité physique et numérique garantit que toute tentative de manipulation est immédiatement détectée et enregistrée."
+                    },
+                    blockchain: {
+                        title: "Vérifié par Blockchain",
+                        description: "Chaque scan est authentifié par une technologie blockchain immuable, garantissant une transparence complète."
+                    },
+                    noApp: {
+                        title: "Aucune Application Requise",
+                        description: "Fonctionne avec tout smartphone compatible NFC. Il suffit de toucher et vérifier - aucun téléchargement nécessaire."
+                    },
+                    globalTracking: {
+                        title: "Suivi Mondial",
+                        description: "La surveillance en temps réel détecte les modèles suspects et les tentatives de fraude dans toute la chaîne d'approvisionnement."
+                    },
+                    analytics: {
+                        title: "Tableau de Bord Analytique",
+                        description: "Insights de données complets pour les marques et les autorités pour suivre la distribution et la conformité."
+                    },
+                    durability: {
+                        title: "Durabilité à Vie",
+                        description: "Les puces NFC passives ne nécessitent pas de batterie et durent indéfiniment, garantissant une protection à long terme."
+                    }
+                },
+                howItWorks: {
+                    title: "Comment ça Marche",
+                    step1: {
+                        title: "Intégration des Étiquettes",
+                        description: "Étiquettes NFC intégrées à l'installation d'embouteillage avec des clés cryptées uniques"
+                    },
+                    step2: {
+                        title: "Scan du Consommateur",
+                        description: "Un simple toucher du smartphone ouvre une page web de vérification sécurisée"
+                    },
+                    step3: {
+                        title: "Vérification Instantanée",
+                        description: "L'authentification en temps réel confirme l'authenticité du produit"
+                    },
+                    step4: {
+                        title: "Enregistrement des Données",
+                        description: "Tous les scans sont surveillés pour les modèles de fraude et les alertes"
+                    }
+                },
+                benefits: {
+                    title: "Avantages pour Tous les Partenaires",
+                    consumers: {
+                        title: "Pour les Consommateurs",
+                        description: "Tranquillité d'esprit en sachant que vous consommez des produits sûrs et authentiques. Vérification instantanée au bout des doigts."
+                    },
+                    brands: {
+                        title: "Pour les Marques",
+                        description: "Protégez la réputation de la marque, réduisez les pertes dues à la contrefaçon et obtenez des insights précieux sur la chaîne d'approvisionnement."
+                    },
+                    governments: {
+                        title: "Pour les Gouvernements",
+                        description: "Combattez le commerce illicite, améliorez la conformité fiscale et renforcez la protection de la santé publique."
+                    },
+                    retailers: {
+                        title: "Pour les Détaillants",
+                        description: "Vérifiez l'intégrité de l'inventaire instantanément et construisez la confiance des clients avec des produits authentifiés."
+                    }
+                },
+                footer: {
+                    title: "Rejoignez la Lutte Contre le Commerce de Contrefaçons",
+                    subtitle: "Partenaire avec FACT pour établir une nouvelle norme industrielle où la vérification d'authenticité n'est qu'à un toucher.",
+                    contactUs: "Contactez-nous Aujourd'hui",
+                    copyright: "© 2024 Fondation Contre le Commerce de Contrefaçons. Construire un marché mondial de l'alcool plus sûr et plus responsable."
+                }
+            }
+        };
+
+        // Language detection and management
+        let currentLanguage = 'en';
+
+        // Detect language based on IP geolocation
+        async function detectLanguageByIP() {
+            try {
+                const response = await fetch('https://ipapi.co/json/');
+                const data = await response.json();
+                
+                // Map country codes to languages
+                const countryLanguageMap = {
+                    'BR': 'pt', 'PT': 'pt', 'AO': 'pt', 'MZ': 'pt', 'CV': 'pt', 'GW': 'pt', 'ST': 'pt', 'TL': 'pt',
+                    'FR': 'fr', 'BE': 'fr', 'CH': 'fr', 'LU': 'fr', 'MC': 'fr', 'CA': 'fr', 'SN': 'fr', 'CI': 'fr', 'ML': 'fr', 'BF': 'fr', 'NE': 'fr', 'TD': 'fr', 'MG': 'fr', 'CM': 'fr', 'CF': 'fr', 'CD': 'fr', 'CG': 'fr', 'GA': 'fr', 'GQ': 'fr', 'DJ': 'fr', 'KM': 'fr', 'RE': 'fr', 'YT': 'fr', 'NC': 'fr', 'PF': 'fr', 'WF': 'fr', 'VU': 'fr', 'BI': 'fr', 'RW': 'fr', 'SC': 'fr', 'MU': 'fr', 'HT': 'fr', 'GP': 'fr', 'MQ': 'fr', 'GF': 'fr', 'PM': 'fr', 'BL': 'fr', 'MF': 'fr'
+                };
+                
+                const detectedLang = countryLanguageMap[data.country_code] || 'en';
+                return detectedLang;
+            } catch (error) {
+                console.log('IP detection failed, using default language');
+                return 'en';
+            }
+        }
+
+        // Load language preference from localStorage
+        function loadLanguagePreference() {
+            const savedLanguage = localStorage.getItem('fact-language');
+            if (savedLanguage && translations[savedLanguage]) {
+                return savedLanguage;
+            }
+            return null;
+        }
+
+        // Save language preference to localStorage
+        function saveLanguagePreference(language) {
+            localStorage.setItem('fact-language', language);
+        }
+
+        // Translate page content
+        function translatePage(language) {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                const translation = getNestedTranslation(translations[language], key);
+                if (translation) {
+                    if (element.tagName === 'TITLE') {
+                        element.textContent = translation;
+                    } else {
+                        element.textContent = translation;
+                    }
+                }
+            });
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = language;
+            
+            // Update language selector
+            const languageSelect = document.getElementById('languageSelect');
+            if (languageSelect) {
+                languageSelect.value = language;
+            }
+        }
+
+        // Get nested translation value
+        function getNestedTranslation(obj, path) {
+            return path.split('.').reduce((current, key) => current && current[key], obj);
+        }
+
+        // Initialize language
+        async function initializeLanguage() {
+            // Check for saved preference first
+            const savedLanguage = loadLanguagePreference();
+            if (savedLanguage) {
+                currentLanguage = savedLanguage;
+            } else {
+                // Detect language by IP
+                currentLanguage = await detectLanguageByIP();
+                saveLanguagePreference(currentLanguage);
+            }
+            
+            translatePage(currentLanguage);
+        }
+
+        // Language selector event listener
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelect = document.getElementById('languageSelect');
+            if (languageSelect) {
+                languageSelect.addEventListener('change', function() {
+                    currentLanguage = this.value;
+                    translatePage(currentLanguage);
+                    saveLanguagePreference(currentLanguage);
+                });
+            }
+            
+            // Initialize language
+            initializeLanguage();
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -527,10 +941,10 @@
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
-                nav.style.background = 'rgba(26, 26, 46, 0.98)';
-                nav.style.boxShadow = '0 5px 20px rgba(0,0,0,0.3)';
+                nav.style.background = 'rgba(0, 0, 0, 0.98)';
+                nav.style.boxShadow = '0 5px 20px rgba(255,255,255,0.1)';
             } else {
-                nav.style.background = 'rgba(26, 26, 46, 0.95)';
+                nav.style.background = 'rgba(0, 0, 0, 0.95)';
                 nav.style.boxShadow = 'none';
             }
         });
