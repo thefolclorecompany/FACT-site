@@ -161,7 +161,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 6rem 2rem 4rem;
+            padding: 8rem 2rem 4rem;
             position: relative;
         }
 
@@ -363,6 +363,12 @@
             background: var(--secondary);
         }
 
+        /* Demo Section */
+        .demo-section {
+            padding: 5rem 2rem;
+            background: var(--primary);
+        }
+
         .benefits-grid {
             max-width: 1200px;
             margin: 0 auto;
@@ -439,6 +445,10 @@
                 top: 2.5rem;
             }
 
+            .hero {
+                padding: 10rem 2rem 4rem;
+            }
+
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -469,6 +479,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="demo.css">
 </head>
 <body>
     <!-- Mission Banner -->
@@ -488,6 +499,7 @@
                 <li><a href="#features" data-translate="nav.features">Features</a></li>
                 <li><a href="#how-it-works" data-translate="nav.howItWorks">How It Works</a></li>
                 <li><a href="#benefits" data-translate="nav.benefits">Benefits</a></li>
+                <li><a href="#demo" data-translate="nav.demo">Try Demo</a></li>
                 <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
                 <li>
                     <div class="language-selector">
@@ -629,6 +641,25 @@
         </div>
     </section>
 
+    <!-- Interactive Demo Section -->
+    <section id="demo" class="demo-section">
+        <div class="demo-container">
+            <div class="demo-header-section">
+                <h2 class="demo-title" data-translate="demo.title">Try It Yourself</h2>
+                <p class="demo-subtitle" data-translate="demo.subtitle">Experience our NFC verification system in action. See how easy it is to verify product authenticity and track supply chain journeys.</p>
+                
+                <div class="demo-toggle">
+                    <button class="demo-tab active" data-view="scan" data-translate="demo.tabs.scan">Consumer Scan</button>
+                    <button class="demo-tab" data-view="brand-dashboard" data-translate="demo.tabs.dashboard">Brand Dashboard</button>
+                </div>
+            </div>
+            
+            <div id="nfc-demo-container">
+                <!-- Demo content will be rendered here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-content">
@@ -660,6 +691,7 @@
                     features: "Features",
                     howItWorks: "How It Works",
                     benefits: "Benefits",
+                    demo: "Try Demo",
                     contact: "Contact"
                 },
                 mission: {
@@ -739,6 +771,14 @@
                         description: "Verify inventory integrity instantly and build customer trust with authenticated products."
                     }
                 },
+                demo: {
+                    title: "Try It Yourself",
+                    subtitle: "Experience our NFC verification system in action. See how easy it is to verify product authenticity and track supply chain journeys.",
+                    tabs: {
+                        scan: "Consumer Scan",
+                        dashboard: "Brand Dashboard"
+                    }
+                },
                 footer: {
                     title: "Join the Fight Against Counterfeit Trade",
                     subtitle: "Partner with FACT to establish a new industry standard where authenticity verification is just a tap away.",
@@ -758,6 +798,7 @@
                     features: "Recursos",
                     howItWorks: "Como Funciona",
                     benefits: "Benefícios",
+                    demo: "Teste Demo",
                     contact: "Contato"
                 },
                 mission: {
@@ -837,6 +878,14 @@
                         description: "Verifique a integridade do estoque instantaneamente e construa confiança do cliente com produtos autenticados."
                     }
                 },
+                demo: {
+                    title: "Experimente Você Mesmo",
+                    subtitle: "Experimente nosso sistema de verificação NFC em ação. Veja como é fácil verificar a autenticidade do produto e rastrear jornadas da cadeia de suprimentos.",
+                    tabs: {
+                        scan: "Verificação do Consumidor",
+                        dashboard: "Painel da Marca"
+                    }
+                },
                 footer: {
                     title: "Junte-se à Luta Contra o Comércio de Falsificações",
                     subtitle: "Faça parceria com a FACT para estabelecer um novo padrão da indústria onde a verificação de autenticidade está a apenas um toque de distância.",
@@ -856,6 +905,7 @@
                     features: "Fonctionnalités",
                     howItWorks: "Comment ça Marche",
                     benefits: "Avantages",
+                    demo: "Essayer Demo",
                     contact: "Contact"
                 },
                 mission: {
@@ -933,6 +983,14 @@
                     retailers: {
                         title: "Pour les Détaillants",
                         description: "Vérifiez l'intégrité de l'inventaire instantanément et construisez la confiance des clients avec des produits authentifiés."
+                    }
+                },
+                demo: {
+                    title: "Essayez-le Vous-même",
+                    subtitle: "Découvrez notre système de vérification NFC en action. Voyez à quel point il est facile de vérifier l'authenticité du produit et de suivre les parcours de la chaîne d'approvisionnement.",
+                    tabs: {
+                        scan: "Scan du Consommateur",
+                        dashboard: "Tableau de Bord de la Marque"
                     }
                 },
                 footer: {
@@ -1082,6 +1140,24 @@
         document.querySelectorAll('.feature-card, .benefit-card, .step').forEach(el => {
             observer.observe(el);
         });
+
+        // Demo tab functionality
+        document.querySelectorAll('.demo-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.demo-tab').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Switch demo view
+                const view = this.getAttribute('data-view');
+                if (window.nfcDemo) {
+                    window.nfcDemo.currentView = view;
+                    window.nfcDemo.render();
+                }
+            });
+        });
     </script>
+    <script src="demo.js"></script>
 </body>
 </html>
