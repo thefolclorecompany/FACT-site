@@ -30,31 +30,12 @@
             overflow-x: hidden;
         }
 
-        /* Mission Banner */
-        .mission-banner {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--primary);
-            border-bottom: 1px solid var(--border);
-            z-index: 1001;
-            padding: 0.75rem 0;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        .mission-banner-text {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+        /* Mission Banner removed */
 
         /* Navigation */
         nav {
             position: fixed;
-            top: 3rem; /* default offset below mission banner */
+            top: 0;
             width: 100%;
             background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(10px);
@@ -441,12 +422,11 @@
                 padding: 0.5rem 0;
             }
 
-            /* Ensure nav sits directly beneath the mission banner on mobile */
-            nav { top: 2.25rem; }
+            /* Nav at top on mobile after removing banner */
+            nav { top: 0; }
 
             .hero {
-                /* Reduce excessive top padding to remove large gap under fixed nav */
-                padding: 8rem 1.25rem 3rem;
+                padding: 6.5rem 1.25rem 3rem;
             }
 
             .hero-content {
@@ -484,12 +464,7 @@
     <link rel="stylesheet" href="demo.css">
 </head>
 <body>
-    <!-- Mission Banner -->
-    <div class="mission-banner">
-        <div class="mission-banner-text" data-translate="mission.banner">
-            To defend great brands and save lives by ending counterfeit alcohol at its source.
-        </div>
-    </div>
+    <!-- Mission Banner removed -->
 
     <!-- Navigation -->
     <nav>
