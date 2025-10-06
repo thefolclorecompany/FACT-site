@@ -54,7 +54,7 @@
         /* Navigation */
         nav {
             position: fixed;
-            top: 3rem;
+            top: 3rem; /* default offset below mission banner */
             width: 100%;
             background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(10px);
@@ -441,12 +441,12 @@
                 padding: 0.5rem 0;
             }
 
-            .nav {
-                top: 2.5rem;
-            }
+            /* Ensure nav sits directly beneath the mission banner on mobile */
+            nav { top: 2.25rem; }
 
             .hero {
-                padding: 10rem 2rem 4rem;
+                /* Reduce excessive top padding to remove large gap under fixed nav */
+                padding: 8rem 1.25rem 3rem;
             }
 
             .hero-content {
@@ -460,6 +460,8 @@
 
             .cta-buttons {
                 flex-direction: column;
+                align-items: stretch;
+                gap: 0.75rem;
             }
 
             .nav-links {
@@ -471,11 +473,11 @@
             }
 
             .mission-title {
-                font-size: 2rem;
+                font-size: 1.75rem;
             }
 
             .mission-text {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
         }
     </style>

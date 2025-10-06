@@ -178,6 +178,26 @@ class NFCDemo {
                 });
             }
 
+            const overlay = document.getElementById('sidebar-overlay');
+            if (overlay) {
+                overlay.addEventListener('click', () => {
+                    this.menuOpen = false;
+                    this.render();
+                });
+            }
+
+            // Close sidebar on Escape key
+            if (this.menuOpen) {
+                const escHandler = (e) => {
+                    if (e.key === 'Escape') {
+                        this.menuOpen = false;
+                        this.render();
+                        document.removeEventListener('keydown', escHandler);
+                    }
+                };
+                document.addEventListener('keydown', escHandler);
+            }
+
             const scannerBtn = document.getElementById('scanner-btn');
             if (scannerBtn) {
                 scannerBtn.addEventListener('click', () => {
@@ -387,7 +407,7 @@ class NFCDemo {
             <div class="demo-dashboard">
                 <div class="dashboard-header">
                     <h2>Brand Dashboard</h2>
-                    <button id="menu-btn" class="menu-button">
+                    <button id="menu-btn" class="menu-button" aria-label="Toggle menu" aria-controls="dashboard-sidebar" aria-expanded="${this.menuOpen}">
                         ${this.menuOpen ? 
                             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' :
                             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>'
@@ -396,7 +416,7 @@ class NFCDemo {
                 </div>
 
                 <div class="dashboard-content">
-                    <div class="sidebar ${this.menuOpen ? 'open' : ''}">
+                    <div id="dashboard-sidebar" class="sidebar ${this.menuOpen ? 'open' : ''}" role="complementary" aria-hidden="${!this.menuOpen}">
                         <div class="sidebar-header">
                             <h3>FACT Dashboard</h3>
                             <p>Highland Reserve</p>
@@ -436,6 +456,8 @@ class NFCDemo {
                             </button>
                         </nav>
                     </div>
+
+                    <div id="sidebar-overlay" class="sidebar-overlay ${this.menuOpen ? 'visible' : ''}"></div>
 
                     <div class="main-content">
                         <div class="stats-grid">
