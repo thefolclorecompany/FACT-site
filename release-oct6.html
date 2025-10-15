@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="meta.title">FACT - Foundation Against Counterfeit Trade</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js"></script>
+    <style>
+        /* Press Release Specific Styles */
+        .press-release-page {
+            padding: 8rem 2rem 4rem;
+            min-height: 100vh;
+            background: var(--primary);
+        }
+
+        .press-release {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--secondary);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .press-header {
+            text-align: center;
+            border-bottom: 3px solid var(--highlight);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .press-logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .press-tagline {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .release-info {
+            background: var(--accent);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--highlight);
+            border-radius: 4px;
+        }
+
+        .release-info p {
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .press-release h1 {
+            font-size: 2rem;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            color: var(--highlight);
+            font-weight: 400;
+        }
+
+        .subheading {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .location-date {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            color: var(--highlight);
+        }
+
+        .press-release p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: var(--accent);
+            border-left: 5px solid var(--highlight);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box h3 {
+            color: var(--highlight);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .highlight-box p {
+            color: var(--text-light);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: var(--accent);
+            border-radius: 8px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--highlight);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .quote {
+            border-left: 4px solid var(--highlight);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        .quote-attribution {
+            font-style: normal;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            color: var(--highlight);
+        }
+
+        .solution-points {
+            margin: 2rem 0;
+        }
+
+        .solution-points h3 {
+            color: var(--highlight);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .solution-points ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .solution-points li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .solution-points li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--highlight);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .solution-points li strong {
+            color: var(--highlight);
+        }
+
+        .about-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border);
+        }
+
+        .about-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--highlight);
+            font-weight: 500;
+        }
+
+        .contact-section {
+            background: var(--accent);
+            color: var(--text);
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .contact-section h3 {
+            margin-bottom: 1rem;
+            color: var(--highlight);
+        }
+
+        .contact-section a {
+            color: var(--highlight);
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
+
+        .urgent-banner {
+            background: var(--highlight);
+            color: var(--primary);
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+
+        /* Brand Partners Section */
+        .brand-partners-section {
+            background: var(--secondary);
+            padding: 4rem 0;
+            border-top: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .partners-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .partners-title {
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--text-light);
+            font-weight: 400;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .carousel-wrapper {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 3rem;
+            animation: scroll 40s linear infinite;
+            width: max-content;
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        .partner-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 180px;
+            height: 80px;
+            padding: 1rem;
+            background: var(--accent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            transform: scale(1.05);
+            border-color: var(--highlight);
+            background: var(--secondary);
+        }
+
+        .partner-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: grayscale(100%) brightness(1.2);
+            transition: filter 0.3s ease;
+        }
+
+        .partner-logo:hover img {
+            filter: grayscale(0%) brightness(1);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .press-release-page {
+                padding: 6rem 1rem 2rem;
+            }
+
+            .press-release {
+                padding: 2rem 1.5rem;
+            }
+
+            .press-release h1 {
+                font-size: 1.5rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .press-release p {
+                text-align: left;
+            }
+
+            /* Brand Partners Mobile */
+            .brand-partners-section {
+                padding: 3rem 0;
+            }
+
+            .partners-container {
+                padding: 0 1rem;
+            }
+
+            .partners-title {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+
+            .carousel-track {
+                gap: 2rem;
+            }
+
+            .partner-logo {
+                min-width: 140px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">FACT</div>
+            <ul class="nav-links">
+                <li><a href="index.html#mission" data-translate="nav.platform">Platform</a></li>
+                <li><a href="demo.html" data-translate="nav.demo">Try Demo</a></li>
+                <li><a href="index.html#contact" data-translate="nav.contact">Contact</a></li>
+                <li>
+                    <div class="nav-cta">
+                        <a href="index.html" class="btn btn-primary">← Home</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Press Release Content -->
+    <div class="press-release-page">
+        <div class="press-release">
+            <div class="press-header">
+                <div class="press-logo">FACT</div>
+                <div class="press-tagline">Foundation Against Counterfeit Trade</div>
+            </div>
+
+            <div class="urgent-banner" data-translate="pressRelease.forImmediateRelease">
+                FOR IMMEDIATE RELEASE
+            </div>
+
+            <div class="release-info">
+                <p><strong data-translate="pressRelease.date">Date:</strong> October 6, 2025</p>
+                <p><strong data-translate="pressRelease.contact">Contact:</strong> press@factcertified.org</p>
+                <p><strong data-translate="pressRelease.website">Website:</strong> www.factcertified.org</p>
+            </div>
+
+            <h1 data-translate="pressRelease.title">Brazil's Methanol Crisis: A Preventable Tragedy Demanding Immediate Action</h1>
+            
+            <p class="subheading" data-translate="pressRelease.subtitle">FACT's Patented Authentication Technology, Successfully Protecting Consumers Since 2019, Offers Immediate Solution to Combat Counterfeit Alcohol Crisis That Has Claimed Lives and Crippled Brazil's Beverage Industry</p>
+
+            <p class="location-date" data-translate="pressRelease.location">SÃO PAULO, BRAZIL — October 6, 2025</p>
+
+            <p data-translate="pressRelease.paragraph1">As Brazil grapples with a devastating methanol poisoning crisis that has left at least one person dead, 11 deaths under investigation, and over 100 suspected cases across multiple states, the Foundation Against Counterfeit Trade (FACT) is calling for urgent industry-wide adoption of proven authentication technology that could have prevented this public health catastrophe.</p>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">127+</span>
+                    <span class="stat-label" data-translate="pressRelease.suspectedCases">Suspected Cases</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label" data-translate="pressRelease.deathsConfirmed">Deaths Confirmed or Under Investigation</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50%</span>
+                    <span class="stat-label" data-translate="pressRelease.revenueDrop">Revenue Drop for Distilled Beverages</span>
+                </div>
+            </div>
+
+            <p data-translate="pressRelease.paragraph2">The current crisis, concentrated primarily in São Paulo but spreading to at least five states and the capital Brasília, has devastated consumer confidence and brought Brazil's vibrant hospitality industry to its knees. Bars that once sold 80 caipirinhas per night are selling none. Restaurants have suspended liquor sales entirely. Health Minister Alexandre Padilha has issued unprecedented warnings for Brazilians to "avoid distilled products, especially colorless ones."</p>
+
+            <p><strong data-translate="pressRelease.paragraph3">The tragedy? This was entirely preventable.</strong></p>
+
+            <div class="quote">
+                <span data-translate="pressRelease.quote1">"Every single death, every person left blind or in a coma, every family destroyed by this crisis represents a failure of our industry to prioritize consumer safety over cost savings. The technology to prevent this has existed for six years. We've been protecting our consumers with it since day one. The question Brazil must answer now is: how many more lives will be lost before the industry acts?"</span>
+                <div class="quote-attribution" data-translate="pressRelease.quote1Author">— Guilherme Boavista, Co-Founder, FACT</div>
+            </div>
+
+            <div class="highlight-box">
+                <h3 data-translate="pressRelease.solutionTitle">A Solution That Works: Six Years of Proven Protection</h3>
+                <p data-translate="pressRelease.solutionText">Since 2019, every bottle of Cãna Cachaça has been protected by FACT's patented blockchain-verified NFC authentication system (Patent US20210391993A1). Not a single case of counterfeit Cãna has entered the market. Not one consumer has been at risk from our products.</p>
+            </div>
+
+            <p data-translate="pressRelease.paragraph4">FACT's technology creates an unbreakable chain of trust from bottling facility to consumer. Each bottle receives a tamper-evident, cryptographically secured NFC tag embedded in the cork or label. Any smartphone can scan the tag instantly—no app required—to verify authenticity in real-time. Every scan is logged to a blockchain-backed database, making it impossible for counterfeiters to duplicate or reuse tags without immediate detection.</p>
+
+            <div class="solution-points">
+                <h3 data-translate="pressRelease.howItStopsTitle">How FACT Technology Stops Methanol Poisoning:</h3>
+                <ul>
+                    <li><strong data-translate="pressRelease.impossibleToCounterfeit">Impossible to Counterfeit:</strong> <span data-translate="pressRelease.impossibleToCounterfeitDesc">Cryptographically unique tags cannot be cloned with conventional technology</span></li>
+                    <li><strong data-translate="pressRelease.instantVerification">Instant Consumer Verification:</strong> <span data-translate="pressRelease.instantVerificationDesc">Any person can tap their phone to a bottle and receive immediate authenticity confirmation</span></li>
+                    <li><strong data-translate="pressRelease.tamperDetection">Tamper Detection:</strong> <span data-translate="pressRelease.tamperDetectionDesc">Physical seals show evidence of any attempt to open or refill bottles</span></li>
+                    <li><strong data-translate="pressRelease.supplyChainTransparency">Supply Chain Transparency:</strong> <span data-translate="pressRelease.supplyChainTransparencyDesc">Real-time tracking detects suspicious patterns, such as the same tag appearing in multiple locations</span></li>
+                    <li><strong data-translate="pressRelease.fraudAlerts">Fraud Alerts:</strong> <span data-translate="pressRelease.fraudAlertsDesc">System automatically flags reuse attempts or geographic anomalies</span></li>
+                    <li><strong data-translate="pressRelease.noAppRequired">No App Required:</strong> <span data-translate="pressRelease.noAppRequiredDesc">Works with any NFC-enabled smartphone, ensuring accessibility for all consumers</span></li>
+                </ul>
+            </div>
+
+            <p data-translate="pressRelease.paragraph5">The contrast with current market practices is stark. While FACT-protected bottles offer forensic-level authentication, the vast majority of Brazilian spirits rely on easily forged QR codes, visual seals that any print shop can reproduce, or no protection at all. These outdated approaches have created a vulnerability that organized crime has ruthlessly exploited—with deadly consequences.</p>
+
+            <div class="quote">
+                <span data-translate="pressRelease.quote2">"In February 2023, we presented this technology to Brazil's beverage industry. We showed them exactly how it works and why it's necessary. The response was silence. Companies chose the cheapest option instead of the safest one. Now we're counting bodies. This isn't about technology availability—it's about industry accountability."</span>
+                <div class="quote-attribution" data-translate="pressRelease.quote2Author">— Nick Walker, Co-Founder, FACT</div>
+            </div>
+
+            <p data-translate="pressRelease.paragraph6">The current crisis has exposed the catastrophic cost of this inaction. Police have confirmed that counterfeit beverages contaminated with methanol are responsible for the poisonings, and authorities suspect possible links to organized crime networks. Federal police are investigating whether the same methanol illegally imported to adulterate fuel may have entered the alcohol supply chain.</p>
+
+            <p data-translate="pressRelease.paragraph7">Meanwhile, Brazil's hospitality industry faces economic devastation. The Federation of Hotels, Restaurants, and Bars of the State of São Paulo estimates revenue losses of up to 50% on distilled beverages at some establishments, with the industry fearing an overall 30% drop in business. The government has established a crisis "situation room" and is making emergency purchases of methanol antidotes—treating symptoms while the root cause remains unaddressed.</p>
+
+            <div class="highlight-box">
+                <h3 data-translate="pressRelease.pathForwardTitle">The Path Forward: Immediate Industry Action Required</h3>
+                <p data-translate="pressRelease.pathForwardText">FACT is calling for mandatory authentication standards for all distilled beverages sold in Brazil. The technology exists. The infrastructure is proven. What's missing is the political and industry will to implement it.</p>
+            </div>
+
+            <p data-translate="pressRelease.paragraph8">FACT is currently in urgent discussions with Brazilian health authorities, major spirits producers, international certification bodies, and retail chains to implement emergency authentication measures. The company has the capacity to begin immediate deployment and is offering expedited implementation support for any producer committed to protecting their consumers.</p>
+
+            <p data-translate="pressRelease.paragraph9">"This isn't about our company," Boavista emphasizes. "This is about establishing a fundamental safety standard that should be non-negotiable: consumers should be able to verify with absolute certainty that the alcohol they're drinking is genuine. In 2025, in a country with nearly universal smartphone penetration, there is no excuse for preventable deaths from counterfeit alcohol."</p>
+
+            <p data-translate="pressRelease.paragraph10">The question facing Brazil's beverage industry, regulators, and consumers is no longer whether such technology should be adopted—but how quickly it can be implemented before more lives are lost.</p>
+
+            <div class="about-section">
+                <h3 data-translate="pressRelease.aboutTitle">About FACT</h3>
+                <p data-translate="pressRelease.aboutParagraph1">The Foundation Against Counterfeit Trade (FACT) was established in 2019 by Nick Walker and Guilherme Boavista in response to the persistent threat of counterfeit alcohol in Brazil and Southeast Asia. FACT's patented blockchain-verified NFC authentication system (Patent US20210391993A1) has protected every bottle of Cãna Cachaça since its inception, with zero counterfeiting incidents in six years of deployment.</p>
+                
+                <p data-translate="pressRelease.aboutParagraph2">FACT's mission is to establish authentication verification as a fundamental consumer safety standard in the global alcohol market, making product verification as simple as tapping a smartphone. The company's technology combines tamper-evident physical seals with cryptographic authentication and blockchain-backed verification to create an unbreakable chain of trust from production to consumption.</p>
+            </div>
+
+            <div class="contact-section">
+                <h3 data-translate="pressRelease.mediaContactTitle">Media Contact & Partnership Inquiries</h3>
+                <p><strong data-translate="pressRelease.email">Email:</strong> <a href="mailto:press@factcertified.org">press@factcertified.org</a></p>
+                <p><strong data-translate="pressRelease.website">Website:</strong> <a href="http://www.factcertified.org">www.factcertified.org</a></p>
+                <p><strong data-translate="pressRelease.emergencySupport">Emergency Deployment Support:</strong> <span data-translate="pressRelease.emergencySupportText">Available immediately for qualifying producers</span></p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;" data-translate="pressRelease.technicalNote">For technical specifications and implementation details, please visit our website or contact our team directly.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brand Partners Section -->
+    <div class="brand-partners-section">
+        <div class="partners-container">
+            <h3 class="partners-title">Our Brand Partners</h3>
+            <div class="carousel-wrapper">
+                <div class="carousel-track">
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/180x80/333/fff?text=Partner+1" alt="Partner 1">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/180x80/333/fff?text=Partner+2" alt="Partner 2">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/180x80/333/fff?text=Partner+3" alt="Partner 3">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/180x80/333/fff?text=Partner+4" alt="Partner 4">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/180x80/333/fff?text=Partner+5" alt="Partner 5">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/180x80/333/fff?text=Partner+6" alt="Partner 6">
+                    </div>
+                    <!-- Duplicate logos for seamless loop -->
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/180x80/333/fff?text=Partner+1" alt="Partner 1">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/180x80/333/fff?text=Partner+2" alt="Partner 2">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/180x80/333/fff?text=Partner+3" alt="Partner 3">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/180x80/333/fff?text=Partner+4" alt="Partner 4">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/180x80/333/fff?text=Partner+5" alt="Partner 5">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/180x80/333/fff?text=Partner+6" alt="Partner 6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section id="contact" style="background: var(--accent); padding: 4rem 2rem; text-align: center; border-top: 1px solid var(--border);">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="margin-bottom: 1rem;" data-translate="footer.title">Join the Fight Against Counterfeit Trade</h2>
+            <p style="color: var(--text-light); margin-bottom: 2rem;" data-translate="footer.subtitle">
+                Partner with FACT to establish a new industry standard where authenticity verification is just a tap away.
+            </p>
+            <p style="font-size: 1.2rem; color: var(--highlight); margin-bottom: 2rem; font-weight: 500;">
+                <strong>Email:</strong> <a href="mailto:info@factcertified.org" style="color: var(--highlight); text-decoration: underline;">info@factcertified.org</a>
+            </p>
+            <a href="mailto:info@factcertified.org" class="btn btn-primary" data-translate="footer.contactUs">Contact Us Today</a>
+            <p style="margin-top: 1.5rem; color: var(--text-light); font-size: 0.9rem;">
+                <span data-translate="footer.patentPrefix">Powered by the latest cryptographic technology. Patent:</span>
+                <a href="https://patents.google.com/patent/US20210391993A1/en" target="_blank" rel="noopener noreferrer" style="color: var(--highlight); text-decoration: underline; margin-left: 0.35rem;" data-translate="footer.patentLinkLabel">US20210391993A1</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Upper Footer: About (left) + Links (right) -->
+    <div class="footer-upper" aria-label="Footer">
+        <div class="footer-upper-container">
+            <div class="footer-about">
+                <h3>Foundation Against Counterfeit Trade</h3>
+                <p data-translate="mission.banner">To defend great brands and save lives by ending counterfeit alcohol at its source.</p>
+            </div>
+            <div>
+                <div class="footer-links-grid">
+                    <div>
+                        <h3 class="footer-link-title">Company</h3>
+                        <ul class="footer-link-list">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-copyright" data-translate="footer.copyright">
+                © 2024 Foundation Against Counterfeit Trade. Building a safer, more accountable global alcohol market.
+            </p>
+            
+            <!-- Language Selector (bottom-left in footer) -->
+            <div class="footer-language-selector">
+                <select id="languageSelect" class="language-dropdown" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                    <option value="fr">Français</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
