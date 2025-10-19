@@ -236,15 +236,15 @@ const translations = {
             title: "Principais Recursos",
             tamperEvident: {
                 title: "À Prova de Violação",
-                description: "Segurança física e digital garante que qualquer tentativa de violação seja detectada e registrada imediatamente."
+                description: "Segurança física e digital garante que qualquer tentativa de violação seja detectada e registrada."
             },
             blockchain: {
                 title: "Verificado por Blockchain",
-                description: "Cada leitura é autenticada por tecnologia de blockchain imutável, garantindo total transparência."
+                description: "Cada leitura é autenticada por tecnologia de blockchain imutável, garantindo total transparência e privacidade."
             },
             noApp: {
-                title: "Sem Aplicativo Necessário",
-                description: "Funciona em qualquer smartphone com NFC. Basta encostar e verificar — sem downloads."
+                title: "Sem Aplicativo Necessário*",
+                description: "Funciona em qualquer smartphone com NFC. Basta encostar e verificar — sem downloads. (*Menos iPhone)"
             },
             globalTracking: {
                 title: "Rastreamento Global",
@@ -262,7 +262,7 @@ const translations = {
         howItWorks: {
             title: "Como Funciona",
             step1: { title: "Integração da Etiqueta", description: "Etiquetas NFC inseridas no engarrafamento com chaves criptografadas únicas" },
-            step2: { title: "Leitura pelo Consumidor", description: "Um toque no smartphone abre uma página segura de verificação" },
+            step2: { title: "Rastreamento por NFC/RFID", description: "Leitura a cada passo da cadeia de suprimentos." },
             step3: { title: "Verificação Instantânea", description: "Autenticação em tempo real confirma a genuinidade do produto" },
             step4: { title: "Registro de Dados", description: "Todas as leituras são monitoradas para padrões de fraude e alertas" }
         },
