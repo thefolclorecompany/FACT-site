@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate="faq.metaTitle">FAQ - Smart Tracking System</title>
+    <title data-translate="faq.metaTitle">FAQ - FACT Tag System</title>
     <link rel="stylesheet" href="style.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRQ51E961B"></script>
@@ -26,80 +26,152 @@
         <section class="faq">
             <div class="faq-container">
                 <h1 class="section-title" data-translate="faq.title">FAQ - Smart Tracking System</h1>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h3 data-translate="faq.questions.q1.question">Why is this better than traditional solutions?</h3>
-                        <p data-translate="faq.questions.q1.answer">
-                            Traditional solutions like holograms and printed QR codes can be easily copied. NFC tags are unique and encrypted — impossible to clone. The system records every interaction (manufacturing, distribution, seal breaking) creating a complete history that automatically identifies suspicious patterns through AI. To verify authenticity: Android users access www.facttag.info, and iPhone users download our lightweight, intuitive app.
-                        </p>
+                
+                <!-- Search Bar -->
+                <div class="faq-search-container">
+                    <div class="search-box">
+                        <input type="text" id="faq-search" placeholder="Search questions..." class="search-input">
+                        <div class="search-icon">🔍</div>
                     </div>
-                    <div class="faq-item">
-                        <h3 data-translate="faq.questions.q2.question">How does scanning work? Manual, bottle by bottle?</h3>
-                        <p data-translate="faq.questions.q2.answer">
-                            Not necessarily manual. Boxes have RFID tags that can be read from distances up to 10 meters through portals installed at strategic points in the supply chain (factory exit, distributor entrance, retail locations). For sealed cases with 6 or 12 bottles, simply passing through the portal registers all units simultaneously via RFID. Manual readings via smartphone are also possible when needed, particularly by end consumers or establishments.
-                        </p>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="faq-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="general">General</button>
+                    <button class="category-btn" data-category="technical">Technical</button>
+                    <button class="category-btn" data-category="security">Security</button>
+                    <button class="category-btn" data-category="cost">Cost</button>
+                </div>
+
+                <div class="faq-grid" id="faq-grid">
+                    <div class="faq-item" data-category="general">
+                        <div class="faq-header">
+                            <div class="faq-icon">🛡️</div>
+                            <h3 data-translate="faq.questions.q1.question">Why is this better than traditional solutions?</h3>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-content">
+                            <p data-translate="faq.questions.q1.answer">
+                                Traditional solutions like holograms and printed QR codes can be easily copied. NFC tags are unique and encrypted — impossible to clone. The system records every interaction (manufacturing, distribution, seal breaking) creating a complete history that automatically identifies suspicious patterns through AI. To verify authenticity: Android users access www.facttag.info, and iPhone users download our lightweight, intuitive app.
+                            </p>
+                        </div>
                     </div>
-                    <div class="faq-item">
-                        <h3 data-translate="faq.questions.q3.question">What if someone reuses the cap on other counterfeit bottles?</h3>
-                        <p data-translate="faq.questions.q3.answerIntro">
-                            The platform's AI generates alerts based on consumption patterns: volume, customer profile, shelf time, seal-breaking moment (if they have the proper tag), and product type. For example:
-                        </p>
-                        <ul class="faq-list">
-                            <li data-translate="faq.questions.q3.barExample">Bar/Club: The system knows the establishment receives 20 premium whisky bottles weekly. If a cap from a batch delivered 3 weeks ago appears on a "new" bottle, an alert triggers. If that bottle is consumed in 2 days (when the normal pattern is 5-7 days), the suspicion is confirmed.</li>
-                            <li data-translate="faq.questions.q3.supermarketExample">Supermarket: A chain receives 500 vodka units monthly. If caps from old batches start circulating in abnormal volumes, or if the time between delivery and "sale" is inconsistent with historical data, the system identifies it immediately.</li>
-                            <li data-translate="faq.questions.q3.distributorExample">Distributor: If the same cap circulates between multiple points of sale sequentially, or appears in locations unauthorized by the official distribution chain, algorithms detect the deviation.</li>
-                        </ul>
-                        <p data-translate="faq.questions.q3.analysisSummary">
-                            The system's AI cross-references geographic location, time between transactions, establishment consumption profile, and batch history to uncover irregularities that would be humanly invisible.
-                        </p>
+                    <div class="faq-item" data-category="technical">
+                        <div class="faq-header">
+                            <div class="faq-icon">📱</div>
+                            <h3 data-translate="faq.questions.q2.question">How does scanning work? Manual, bottle by bottle?</h3>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-content">
+                            <p data-translate="faq.questions.q2.answer">
+                                Not necessarily manual. Boxes have RFID tags that can be read from distances up to 10 meters through portals installed at strategic points in the supply chain (factory exit, distributor entrance, retail locations). For sealed cases with 6 or 12 bottles, simply passing through the portal registers all units simultaneously via RFID. Manual readings via smartphone are also possible when needed, particularly by end consumers or establishments.
+                            </p>
+                        </div>
                     </div>
-                    <div class="faq-item">
-                        <h3 data-translate="faq.questions.q4.question">How does it prevent liquid tampering after opening the bottle?</h3>
-                        <p data-translate="faq.questions.q4.answerPrimary">
-                            The system detects the exact moment the seal is broken and monitors consumption patterns. If a bottle is opened, resealed by a fraudster, and returns to circulation irregularly, AI algorithms recognize the deviations and notify the manufacturer or health authorities immediately.
-                        </p>
-                        <p data-translate="faq.questions.q4.answerSecondary">
-                            While it doesn't eliminate 100% of the risk of tampering at final consumption (at home), it drastically prevents large-scale adulteration in the distribution chain — where the problem actually occurs and causes significant damage.
-                        </p>
+                    <div class="faq-item" data-category="security">
+                        <div class="faq-header">
+                            <div class="faq-icon">🔒</div>
+                            <h3 data-translate="faq.questions.q3.question">What if someone reuses the cap on other counterfeit bottles?</h3>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-content">
+                            <p data-translate="faq.questions.q3.answerIntro">
+                                The platform's AI generates alerts based on consumption patterns: volume, customer profile, shelf time, seal-breaking moment (if they have the proper tag), and product type. For example:
+                            </p>
+                            <ul class="faq-list">
+                                <li data-translate="faq.questions.q3.barExample">Bar/Club: The system knows the establishment receives 20 premium whisky bottles weekly. If a cap from a batch delivered 3 weeks ago appears on a "new" bottle, an alert triggers. If that bottle is consumed in 2 days (when the normal pattern is 5-7 days), the suspicion is confirmed.</li>
+                                <li data-translate="faq.questions.q3.supermarketExample">Supermarket: A chain receives 500 vodka units monthly. If caps from old batches start circulating in abnormal volumes, or if the time between delivery and "sale" is inconsistent with historical data, the system identifies it immediately.</li>
+                                <li data-translate="faq.questions.q3.distributorExample">Distributor: If the same cap circulates between multiple points of sale sequentially, or appears in locations unauthorized by the official distribution chain, algorithms detect the deviation.</li>
+                            </ul>
+                            <p data-translate="faq.questions.q3.analysisSummary">
+                                The system's AI cross-references geographic location, time between transactions, establishment consumption profile, and batch history to uncover irregularities that would be humanly invisible.
+                            </p>
+                        </div>
                     </div>
-                    <div class="faq-item">
-                        <h3 data-translate="faq.questions.q5.question">Can consumers verify authenticity?</h3>
-                        <p data-translate="faq.questions.q5.answer">
-                            Yes! Android users access www.facttag.info and iPhone users download our lightweight app. Simply bring your smartphone close to the cap (NFC). The system instantly shows: product authenticity, manufacturing date, batch, movement history, and additional product information.
-                        </p>
+                    <div class="faq-item" data-category="security">
+                        <div class="faq-header">
+                            <div class="faq-icon">🛡️</div>
+                            <h3 data-translate="faq.questions.q4.question">How does it prevent liquid tampering after opening the bottle?</h3>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-content">
+                            <p data-translate="faq.questions.q4.answerPrimary">
+                                The system detects the exact moment the seal is broken and monitors consumption patterns. If a bottle is opened, resealed by a fraudster, and returns to circulation irregularly, AI algorithms recognize the deviations and notify the manufacturer or health authorities immediately.
+                            </p>
+                            <p data-translate="faq.questions.q4.answerSecondary">
+                                While it doesn't eliminate 100% of the risk of tampering at final consumption (at home), it drastically prevents large-scale adulteration in the distribution chain — where the problem actually occurs and causes significant damage.
+                            </p>
+                        </div>
                     </div>
-                    <div class="faq-item">
-                        <h3 data-translate="faq.questions.q6.question">What's the real impact of counterfeiting?</h3>
-                        <p data-translate="faq.questions.q6.answerIntro">
-                            The counterfeit beverage industry moves an estimated R$55 billion annually in Brazil alone, causing:
-                        </p>
-                        <ul class="faq-list">
-                            <li data-translate="faq.questions.q6.losses">Massive losses to legitimate manufacturers</li>
-                            <li data-translate="faq.questions.q6.tax">Tax revenue losses</li>
-                            <li data-translate="faq.questions.q6.health">Serious public health risks: counterfeit products often contain methanol and other toxic substances causing poisoning, blindness, and even death</li>
-                            <li data-translate="faq.questions.q6.brand">Irreparable damage to established brand reputations</li>
-                        </ul>
-                        <p data-translate="faq.questions.q6.answerSummary">
-                            The system implementation cost is insignificant compared to the damage caused by counterfeiting.
-                        </p>
+                    <div class="faq-item" data-category="general">
+                        <div class="faq-header">
+                            <div class="faq-icon">✅</div>
+                            <h3 data-translate="faq.questions.q5.question">Can consumers verify authenticity?</h3>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-content">
+                            <p data-translate="faq.questions.q5.answer">
+                                Yes! Android users access www.facttag.info and iPhone users download our lightweight app. Simply bring your smartphone close to the cap (NFC). The system instantly shows: product authenticity, manufacturing date, batch, movement history, and additional product information.
+                            </p>
+                        </div>
                     </div>
-                    <div class="faq-item">
-                        <h3 data-translate="faq.questions.q7.question">How much does implementation cost?</h3>
-                        <p data-translate="faq.questions.q7.answer">
-                            NFC tag costs vary by volume but generally range from R$0.50 to R$2.00 per unit at scale. RFID tags for boxes cost between R$0.30 to R$5.00. Considering the estimated R$55 billion loss to counterfeit products, public health risks, and brand damage, ROI is typically positive within 6-12 months for most manufacturers.
-                        </p>
+                    <div class="faq-item" data-category="general">
+                        <div class="faq-header">
+                            <div class="faq-icon">📊</div>
+                            <h3 data-translate="faq.questions.q6.question">What's the real impact of counterfeiting?</h3>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-content">
+                            <p data-translate="faq.questions.q6.answerIntro">
+                                The counterfeit beverage industry moves an estimated R$55 billion annually in Brazil alone, causing:
+                            </p>
+                            <ul class="faq-list">
+                                <li data-translate="faq.questions.q6.losses">Massive losses to legitimate manufacturers</li>
+                                <li data-translate="faq.questions.q6.tax">Tax revenue losses</li>
+                                <li data-translate="faq.questions.q6.health">Serious public health risks: counterfeit products often contain methanol and other toxic substances causing poisoning, blindness, and even death</li>
+                                <li data-translate="faq.questions.q6.brand">Irreparable damage to established brand reputations</li>
+                            </ul>
+                            <p data-translate="faq.questions.q6.answerSummary">
+                                The system implementation cost is insignificant compared to the damage caused by counterfeiting.
+                            </p>
+                        </div>
                     </div>
-                    <div class="faq-item">
-                        <h3 data-translate="faq.questions.q8.question">Is it 100% foolproof?</h3>
-                        <p data-translate="faq.questions.q8.answer">
-                            No system is, not even airport security. But it's significantly more robust than any solution available today. The combination of unique hardware (NFC/RFID tags), encryption, real-time tracking, and AI analysis creates multiple layers of protection that make counterfeiting extremely difficult and economically unviable for fraudsters.
-                        </p>
+                    <div class="faq-item" data-category="cost">
+                        <div class="faq-header">
+                            <div class="faq-icon">💰</div>
+                            <h3 data-translate="faq.questions.q7.question">How much does implementation cost?</h3>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-content">
+                            <p data-translate="faq.questions.q7.answer">
+                                NFC tag costs vary by volume but generally range from R$0.50 to R$2.00 per unit at scale. RFID tags for boxes cost between R$0.30 to R$5.00. Considering the estimated R$55 billion loss to counterfeit products, public health risks, and brand damage, ROI is typically positive within 6-12 months for most manufacturers.
+                            </p>
+                        </div>
                     </div>
-                    <div class="faq-item">
-                        <h3 data-translate="faq.questions.q9.question">Does it work offline?</h3>
-                        <p data-translate="faq.questions.q9.answer">
-                            Yes! Basic authenticity verification works offline — you can scan and confirm there's a legitimate tag properly positioned. However, to access the complete movement history and verify the latest supply chain information, an internet connection is required. Once online, all data synchronizes automatically.
-                        </p>
+                    <div class="faq-item" data-category="security">
+                        <div class="faq-header">
+                            <div class="faq-icon">🔐</div>
+                            <h3 data-translate="faq.questions.q8.question">Is it 100% foolproof?</h3>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-content">
+                            <p data-translate="faq.questions.q8.answer">
+                                No system is, not even airport security. But it's significantly more robust than any solution available today. The combination of unique hardware (NFC/RFID tags), encryption, real-time tracking, and AI analysis creates multiple layers of protection that make counterfeiting extremely difficult and economically unviable for fraudsters.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-category="technical">
+                        <div class="faq-header">
+                            <div class="faq-icon">📶</div>
+                            <h3 data-translate="faq.questions.q9.question">Does it work offline?</h3>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-content">
+                            <p data-translate="faq.questions.q9.answer">
+                                Yes! Basic authenticity verification works offline — you can scan and confirm there's a legitimate tag properly positioned. However, to access the complete movement history and verify the latest supply chain information, an internet connection is required. Once online, all data synchronizes automatically.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="faq-back">

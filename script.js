@@ -164,3 +164,118 @@ document.querySelectorAll('.demo-tab').forEach(tab => {
         }
     });
 });
+
+// FAQ Interactive Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // FAQ Toggle functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const header = item.querySelector('.faq-header');
+        const content = item.querySelector('.faq-content');
+        const toggle = item.querySelector('.faq-toggle');
+        
+        if (header && content && toggle) {
+            header.addEventListener('click', function() {
+                const isOpen = item.classList.contains('active');
+                
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        const otherToggle = otherItem.querySelector('.faq-toggle');
+                        if (otherToggle) otherToggle.textContent = '+';
+                    }
+                });
+                
+                // Toggle current item
+                if (isOpen) {
+                    item.classList.remove('active');
+                    toggle.textContent = '+';
+                } else {
+                    item.classList.add('active');
+                    toggle.textContent = '−';
+                }
+            });
+        }
+    });
+    
+    // FAQ Search functionality
+    const searchInput = document.getElementById('faq-search');
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            filterFAQs(searchTerm);
+        });
+    }
+    
+    // FAQ Category filtering
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active button
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter by category
+            const category = this.getAttribute('data-category');
+            filterFAQsByCategory(category);
+        });
+    });
+});
+
+// Filter FAQs by search term
+function filterFAQs(searchTerm) {
+    const faqItems = document.querySelectorAll('.faq-item');
+    const faqGrid = document.getElementById('faq-grid');
+    
+    let visibleCount = 0;
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('h3').textContent.toLowerCase();
+        const answer = item.querySelector('.faq-content').textContent.toLowerCase();
+        
+        if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+            item.style.display = 'block';
+            visibleCount++;
+        } else {
+            item.style.display = 'none';
+        }
+    });
+    
+    // Show/hide no results message
+    let noResultsMsg = document.getElementById('no-results');
+    if (visibleCount === 0 && searchTerm.length > 0) {
+        if (!noResultsMsg) {
+            noResultsMsg = document.createElement('div');
+            noResultsMsg.id = 'no-results';
+            noResultsMsg.className = 'no-results';
+            noResultsMsg.innerHTML = '<p>No questions found matching your search.</p>';
+            faqGrid.appendChild(noResultsMsg);
+        }
+        noResultsMsg.style.display = 'block';
+    } else if (noResultsMsg) {
+        noResultsMsg.style.display = 'none';
+    }
+}
+
+// Filter FAQs by category
+function filterFAQsByCategory(category) {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        
+        if (category === 'all' || itemCategory === category) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+    
+    // Clear search when filtering by category
+    const searchInput = document.getElementById('faq-search');
+    if (searchInput) {
+        searchInput.value = '';
+    }
+}
