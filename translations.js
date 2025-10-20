@@ -212,8 +212,8 @@ const translations = {
     },
     pt: {
         meta: {
-            title: "FACT - Fundação Contra o Comércio de Falsificações",
-            copyright: "© 2024 Fundação Contra o Comércio de Falsificações. Construindo um mercado global de álcool mais seguro e responsável."
+            title: "FACT - Fundação de Autenticação e Certificação de Transparência",
+            copyright: "© 2024 Fundação de Autenticação e Certificação de Transparência. Construindo um mercado global de álcool mais seguro e responsável."
         },
         nav: {
             platform: "Plataforma",
