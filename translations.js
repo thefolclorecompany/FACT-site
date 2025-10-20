@@ -67,8 +67,8 @@ const translations = {
             retailers: { title: "For Retailers", description: "Verify inventory integrity instantly and build customer trust with authenticated products." }
         },
         faq: {
-            metaTitle: "FAQ - Smart Tracking System",
-            title: "FAQ - Smart Tracking System",
+            metaTitle: "FACT - FAQ",
+            title: "FACT - FAQ",
             backLink: "← Back to Home",
             questions: {
                 q1: {
@@ -365,8 +365,8 @@ const translations = {
             retailers: { title: "Para Varejistas", description: "Verifique a integridade do inventário instantaneamente e crie confiança com produtos autenticados." }
         },
         faq: {
-            metaTitle: "FAQ - Sistema de Rastreamento Inteligente",
-            title: "FAQ - Sistema de Rastreamento Inteligente",
+            metaTitle: "FACT - FAQ",
+            title: "FACT Perguntas Frequentes",
             backLink: "← Voltar para a página inicial",
             questions: {
                 q1: {
@@ -663,8 +663,8 @@ const translations = {
             retailers: { title: "Pour les détaillants", description: "Vérifiez instantanément l'intégrité des stocks et renforcez la confiance des clients grâce à des produits authentifiés." }
         },
         faq: {
-            metaTitle: "FAQ - Système de Traçabilité Intelligent",
-            title: "FAQ - Système de Traçabilité Intelligent",
+            metaTitle: "FACT FAQ",
+            title: "FACT - FAQ",
             backLink: "← Retour à l'accueil",
             questions: {
                 q1: {
@@ -824,8 +824,8 @@ const translations = {
             }
         },
         faq: {
-            metaTitle: "FAQ - ระบบติดตามอัจฉริยะ",
-            title: "FAQ - ระบบติดตามอัจฉริยะ",
+            metaTitle: "FACT FAQ",
+            title: "FACT FAQ",
             backLink: "← กลับสู่หน้าหลัก",
             questions: {
                 q1: {
