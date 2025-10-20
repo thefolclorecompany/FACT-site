@@ -119,6 +119,9 @@ const translations = {
                 }
             }
         },
+        banner: {
+            awsOutage: "Due to the ongoing Amazon Web Services outage, we are getting some FACT Tag processing issues. We're sorry and please check in again in a few hours."
+        },
         footer: {
             title: "Join the Fight Against Counterfeit Trade",
             subtitle: "Partner with FACT to establish a new industry standard where authenticity verification is just a tap away.",
@@ -413,6 +416,9 @@ const translations = {
                     answer: "Sim! A verificação básica de autenticidade funciona offline — você consegue escanear e confirmar que existe uma tag legítima adequadamente posicionada. Porém, para acessar o histórico completo de movimentação e verificar as informações mais recentes da cadeia de suprimentos, é necessário conexão com a internet. Assim que houver conexão, todos os dados são sincronizados automaticamente."
                 }
             }
+        },
+        banner: {
+            awsOutage: "Devido à interrupção contínua dos serviços da Amazon Web Services, estamos enfrentando alguns problemas de processamento do FACT Tag. Pedimos desculpas e por favor verifique novamente em algumas horas."
         },
         footer: {
             title: "Junte-se à Luta Contra o Comércio de Falsificações",
@@ -736,6 +742,9 @@ const translations = {
             joinBody3: " pour entamer la discussion.",
             backLink: "← Retour à l'accueil"
         },
+        banner: {
+            awsOutage: "En raison de la panne continue d'Amazon Web Services, nous rencontrons quelques problèmes de traitement des FACT Tags. Nous nous excusons et veuillez vérifier à nouveau dans quelques heures."
+        },
         footer: {
             title: "Rejoignez la lutte contre le commerce de contrefaçons",
             subtitle: "Partenaire de FACT pour établir une nouvelle norme où la vérification d'authenticité est à portée de main.",
@@ -893,6 +902,9 @@ const translations = {
             contactLinkLabel: "หน้าติดต่อ",
             joinBody3: " เพื่อเริ่มการสนทนา",
             backLink: "← กลับสู่หน้าหลัก"
+        },
+        banner: {
+            awsOutage: "เนื่องจาก Amazon Web Services ยังคงมีปัญหา เราจึงประสบปัญหาการประมวลผล FACT Tag บางส่วน เราขออภัยและกรุณาตรวจสอบอีกครั้งในอีกไม่กี่ชั่วโมง"
         },
         footer: {
             title: "เข้าร่วมการต่อสู้กับการค้าสินค้าปลอม",
