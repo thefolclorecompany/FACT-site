@@ -137,7 +137,7 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-document.querySelectorAll('.feature-card, .benefit-card, .step').forEach(el => {
+document.querySelectorAll('.feature-card, .benefit-card, .step, .faq-item').forEach(el => {
     observer.observe(el);
 });
 

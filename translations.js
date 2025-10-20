@@ -7,6 +7,7 @@ const translations = {
         nav: {
             platform: "Platform",
             demo: "Try Demo",
+            faq: "FAQ",
             contact: "Contact",
             brandLogin: "Brand LOGIN",
             scanNow: "SCAN NOW"
@@ -64,6 +65,59 @@ const translations = {
             brands: { title: "For Brands", description: "Protect brand reputation, reduce counterfeiting losses, and gain valuable supply chain insights." },
             governments: { title: "For Governments", description: "Combat illicit trade, improve tax compliance, and enhance public health protection." },
             retailers: { title: "For Retailers", description: "Verify inventory integrity instantly and build customer trust with authenticated products." }
+        },
+        faq: {
+            metaTitle: "FAQ - Smart Tracking System",
+            title: "FAQ - Smart Tracking System",
+            backLink: "← Back to Home",
+            questions: {
+                q1: {
+                    question: "Why is this better than traditional solutions?",
+                    answer: "Traditional solutions like holograms and printed QR codes can be easily copied. NFC tags are unique and encrypted — impossible to clone. The system records every interaction (manufacturing, distribution, seal breaking) creating a complete history that automatically identifies suspicious patterns through AI. To verify authenticity: Android users access www.facttag.info, and iPhone users download our lightweight, intuitive app."
+                },
+                q2: {
+                    question: "How does scanning work? Manual, bottle by bottle?",
+                    answer: "Not necessarily manual. Boxes have RFID tags that can be read from distances up to 10 meters through portals installed at strategic points in the supply chain (factory exit, distributor entrance, retail locations). For sealed cases with 6 or 12 bottles, simply passing through the portal registers all units simultaneously via RFID. Manual readings via smartphone are also possible when needed, particularly by end consumers or establishments."
+                },
+                q3: {
+                    question: "What if someone reuses the cap on other counterfeit bottles?",
+                    answerIntro: "The platform's AI generates alerts based on consumption patterns: volume, customer profile, shelf time, seal-breaking moment (if they have the proper tag), and product type. For example:",
+                    barExample: "Bar/Club: The system knows the establishment receives 20 premium whisky bottles weekly. If a cap from a batch delivered 3 weeks ago appears on a \"new\" bottle, an alert triggers. If that bottle is consumed in 2 days (when the normal pattern is 5-7 days), the suspicion is confirmed.",
+                    supermarketExample: "Supermarket: A chain receives 500 vodka units monthly. If caps from old batches start circulating in abnormal volumes, or if the time between delivery and \"sale\" is inconsistent with historical data, the system identifies it immediately.",
+                    distributorExample: "Distributor: If the same cap circulates between multiple points of sale sequentially, or appears in locations unauthorized by the official distribution chain, algorithms detect the deviation.",
+                    analysisSummary: "The system's AI cross-references geographic location, time between transactions, establishment consumption profile, and batch history to uncover irregularities that would be humanly invisible."
+                },
+                q4: {
+                    question: "How does it prevent liquid tampering after opening the bottle?",
+                    answerPrimary: "The system detects the exact moment the seal is broken and monitors consumption patterns. If a bottle is opened, resealed by a fraudster, and returns to circulation irregularly, AI algorithms recognize the deviations and notify the manufacturer or health authorities immediately.",
+                    answerSecondary: "While it doesn't eliminate 100% of the risk of tampering at final consumption (at home), it drastically prevents large-scale adulteration in the distribution chain — where the problem actually occurs and causes significant damage."
+                },
+                q5: {
+                    question: "Can consumers verify authenticity?",
+                    answer: "Yes! Android users access www.facttag.info and iPhone users download our lightweight app. Simply bring your smartphone close to the cap (NFC). The system instantly shows: product authenticity, manufacturing date, batch, movement history, and additional product information."
+                },
+                q6: {
+                    question: "What's the real impact of counterfeiting?",
+                    answerIntro: "The counterfeit beverage industry moves an estimated R$55 billion annually in Brazil alone, causing:",
+                    losses: "Massive losses to legitimate manufacturers",
+                    tax: "Tax revenue losses",
+                    health: "Serious public health risks: counterfeit products often contain methanol and other toxic substances causing poisoning, blindness, and even death",
+                    brand: "Irreparable damage to established brand reputations",
+                    answerSummary: "The system implementation cost is insignificant compared to the damage caused by counterfeiting."
+                },
+                q7: {
+                    question: "How much does implementation cost?",
+                    answer: "NFC tag costs vary by volume but generally range from R$0.50 to R$2.00 per unit at scale. RFID tags for boxes cost between R$0.30 to R$5.00. Considering the estimated R$55 billion loss to counterfeit products, public health risks, and brand damage, ROI is typically positive within 6-12 months for most manufacturers."
+                },
+                q8: {
+                    question: "Is it 100% foolproof?",
+                    answer: "No system is, not even airport security. But it's significantly more robust than any solution available today. The combination of unique hardware (NFC/RFID tags), encryption, real-time tracking, and AI analysis creates multiple layers of protection that make counterfeiting extremely difficult and economically unviable for fraudsters."
+                },
+                q9: {
+                    question: "Does it work offline?",
+                    answer: "Yes! Basic authenticity verification works offline — you can scan and confirm there's a legitimate tag properly positioned. However, to access the complete movement history and verify the latest supply chain information, an internet connection is required. Once online, all data synchronizes automatically."
+                }
+            }
         },
         footer: {
             title: "Join the Fight Against Counterfeit Trade",
@@ -248,6 +302,7 @@ const translations = {
         nav: {
             platform: "Plataforma",
             demo: "Experimente o Demo",
+            faq: "FAQ",
             contact: "Contato",
             brandLogin: "Login",
             scanNow: "ESCANEAR FACTTAG"
@@ -305,6 +360,59 @@ const translations = {
             brands: { title: "Para Marcas", description: "Proteja a reputação, reduza perdas por falsificação e obtenha insights valiosos da cadeia de suprimentos." },
             governments: { title: "Para Governos", description: "Combata o comércio ilícito, melhore a arrecadação e fortaleça a proteção da saúde pública." },
             retailers: { title: "Para Varejistas", description: "Verifique a integridade do inventário instantaneamente e crie confiança com produtos autenticados." }
+        },
+        faq: {
+            metaTitle: "FAQ - Sistema de Rastreamento Inteligente",
+            title: "FAQ - Sistema de Rastreamento Inteligente",
+            backLink: "← Voltar para a página inicial",
+            questions: {
+                q1: {
+                    question: "Por que isso é melhor que soluções tradicionais?",
+                    answer: "Soluções tradicionais como hologramas e códigos impressos podem ser facilmente copiados. As tags NFC são únicas e criptografadas — impossíveis de clonar. O sistema registra cada interação (fabricação, distribuição, abertura do lacre) criando um histórico completo que identifica padrões suspeitos automaticamente através de IA. Para verificar a autenticidade: usuários Android acessam www.facttag.info, e usuários iPhone baixam nosso app leve e intuitivo."
+                },
+                q2: {
+                    question: "Como funciona a leitura? É manual, garrafa por garrafa?",
+                    answer: "Não precisa ser manual. As caixas têm tags RFID que podem ser lidas à distância de até 20 metros através de portais instalados em pontos estratégicos da cadeia (saída da fábrica, entrada no distribuidor, pontos de venda). Para caixas lacradas com 6 ou 12 garrafas, basta passar pelo portal e todas são registradas simultaneamente. Leituras manuais também são possíveis via smartphone quando necessário ou pelo consumidor final/estabelecimento."
+                },
+                q3: {
+                    question: "E se reutilizarem a tampa em outras garrafas adulteradas?",
+                    answerIntro: "A IA da plataforma gera alertas baseados no padrão de consumo: volume, perfil do cliente, tempo em prateleira, momento de abertura do lacre (se tiver o lacre FACT Tag Pro) e tipo de produto. Por exemplo:",
+                    barExample: "Bar/Clube: O sistema sabe que o estabelecimento recebe 20 garrafas de whisky premium por semana. Se uma tampa de um lote entregue há 3 semanas aparecer em uma \"nova\" garrafa, o alerta dispara. Se essa garrafa for consumida em 2 dias (quando o padrão normal é 5-7 dias), confirma-se a suspeita.",
+                    supermarketExample: "Supermercado: Uma rede recebe 500 unidades mensais de vodka. Se tampas de lotes antigos começarem a circular em volume anormal, ou se o tempo entre entrega e \"venda\" for inconsistente com o histórico, o sistema identifica imediatamente.",
+                    distributorExample: "Distribuidor: Se a mesma tampa circular entre múltiplos pontos de venda em sequência, ou se aparecer em locais não autorizados pela cadeia de distribuição oficial, os algoritmos detectam o desvio.",
+                    analysisSummary: "O sistema cruza: localização geográfica, tempo entre transações, perfil de consumo do estabelecimento e histórico do lote para identificar irregularidades que seriam invisíveis humanamente."
+                },
+                q4: {
+                    question: "Como previne a manipulação do líquido após abrir a garrafa?",
+                    answerPrimary: "O sistema detecta o momento exato em que o lacre é rompido e monitora o padrão de consumo. Se a garrafa é aberta, fechada e volta a circular de forma irregular, os algoritmos de IA reconhecem os desvios e notificam o fabricante imediatamente.",
+                    answerSecondary: "Embora não elimine 100% o risco de adulteração no consumo final (em casa), dificulta drasticamente a adulteração em escala na cadeia de distribuição — onde o problema realmente acontece e causa danos significativos."
+                },
+                q5: {
+                    question: "O consumidor consegue verificar a autenticidade?",
+                    answer: "Sim! Usuários Android acessam www.facttag.info e usuários iPhone baixam nosso app leve. Basta aproximar o smartphone da tampa (NFC). O sistema mostra instantaneamente: autenticidade do produto, data de fabricação, lote, histórico de movimentação e informações adicionais sobre o produto."
+                },
+                q6: {
+                    question: "Qual o impacto real da falsificação?",
+                    answerIntro: "A indústria de bebidas falsificadas movimenta estimados R$55 bilhões anuais somente no Brasil, causando:",
+                    losses: "Prejuízos massivos aos fabricantes legítimos",
+                    tax: "Perda de arrecadação tributária",
+                    health: "Riscos graves à saúde pública: produtos falsificados frequentemente contêm metanol e outras substâncias tóxicas que causam intoxicações, cegueira e até morte",
+                    brand: "Danos irreparáveis à reputação de marcas consolidadas",
+                    answerSummary: "O custo de implementação do sistema é insignificante comparado aos danos causados pela falsificação."
+                },
+                q7: {
+                    question: "Quanto custa implementar isso?",
+                    answer: "O custo por tag NFC varia conforme o volume, mas geralmente fica entre R$0,50 a R$2,00 por unidade em escala. Tags RFID para caixas custam entre R$0,30 a R$5,00. Considerando o prejuízo estimado de R$55 bilhões com produtos falsificados, os riscos à saúde pública e os danos à marca, o ROI costuma ser positivo em 6-12 meses para a maioria dos fabricantes."
+                },
+                q8: {
+                    question: "É 100% infalível?",
+                    answer: "Não, nenhum sistema é. Mas é significativamente mais robusto que qualquer solução disponível hoje. A combinação de hardware único (tags NFC/RFID), criptografia, rastreamento em tempo real e análise de IA cria múltiplas camadas de proteção que tornam a falsificação extremamente difícil e economicamente inviável para fraudadores."
+                },
+                q9: {
+                    question: "Funciona offline?",
+                    answer: "Sim! A verificação básica de autenticidade funciona offline — você consegue escanear e confirmar que existe uma tag legítima adequadamente posicionada. Porém, para acessar o histórico completo de movimentação e verificar as informações mais recentes da cadeia de suprimentos, é necessário conexão com a internet. Assim que houver conexão, todos os dados são sincronizados automaticamente."
+                }
+            }
         },
         footer: {
             title: "Junte-se à Luta Contra o Comércio de Falsificações",
@@ -489,6 +597,7 @@ const translations = {
         nav: {
             platform: "Plateforme",
             demo: "Essayer la démo",
+            faq: "FAQ",
             contact: "Contact",
             brandLogin: "Login",
             scanNow: "Scanner FACT Tag"
@@ -547,6 +656,59 @@ const translations = {
             governments: { title: "Pour les gouvernements", description: "Luttez contre le commerce illicite, améliorez la conformité fiscale et renforcez la santé publique." },
             retailers: { title: "Pour les détaillants", description: "Vérifiez instantanément l'intégrité des stocks et renforcez la confiance des clients grâce à des produits authentifiés." }
         },
+        faq: {
+            metaTitle: "FAQ - Système de Traçabilité Intelligent",
+            title: "FAQ - Système de Traçabilité Intelligent",
+            backLink: "← Retour à l'accueil",
+            questions: {
+                q1: {
+                    question: "Pourquoi est-ce meilleur que les solutions traditionnelles ?",
+                    answer: "Les solutions traditionnelles comme les hologrammes et les QR codes imprimés peuvent être facilement copiées. Les tags NFC sont uniques et cryptées — impossibles à cloner. Le système enregistre chaque interaction (fabrication, distribution, rupture du sceau) créant un historique complet qui identifie automatiquement les schémas suspects grâce à l'IA. Pour vérifier l'authenticité : les utilisateurs Android accèdent à www.facttag.info, et les utilisateurs iPhone téléchargent notre application légère et intuitive."
+                },
+                q2: {
+                    question: "Comment fonctionne la lecture ? Manuellement, bouteille par bouteille ?",
+                    answer: "Pas nécessairement manuel. Les cartons ont des tags RFID qui peuvent être lues à des distances allant jusqu'à 10 mètres via des portails installés aux points stratégiques de la chaîne d'approvisionnement (sortie d'usine, entrée distributeur, points de vente). Pour les cartons scellés de 6 ou 12 bouteilles, il suffit de passer par le portail et toutes les unités sont enregistrées simultanément. Des lectures manuelles via smartphone sont également possibles si nécessaire."
+                },
+                q3: {
+                    question: "Et si quelqu'un réutilise le bouchon sur d'autres bouteilles contrefaites ?",
+                    answerIntro: "L'IA de la plateforme génère des alertes basées sur les schémas de consommation : volume, profil client, temps en rayon, moment de rupture du sceau (avec la FACT Tag Pro) et type de produit. Par exemple :",
+                    barExample: "Bar/Club : Le système sait que l'établissement reçoit 20 bouteilles de whisky premium par semaine. Si un bouchon d'un lot livré il y a 3 semaines apparaît sur une « nouvelle » bouteille, une alerte se déclenche. Si cette bouteille est consommée en 2 jours (alors que le schéma normal est 5-7 jours), la suspicion est confirmée.",
+                    supermarketExample: "Supermarché : Une chaîne reçoit 500 unités de vodka mensuellement. Si des bouchons d'anciens lots commencent à circuler en volumes anormaux, ou si le temps entre livraison et « vente » est incohérent avec les données historiques, le système l'identifie immédiatement.",
+                    distributorExample: "Distributeur : Si le même bouchon circule entre plusieurs points de vente séquentiellement, ou apparaît dans des lieux non autorisés par la chaîne de distribution officielle, les algorithmes détectent l'écart.",
+                    analysisSummary: "Le système croise : localisation géographique, temps entre transactions, profil de consommation de l'établissement et historique du lot pour identifier des irrégularités qui seraient humanement invisibles."
+                },
+                q4: {
+                    question: "Comment empêche-t-il la manipulation du liquide après ouverture de la bouteille ?",
+                    answerPrimary: "Le système détecte le moment exact où le sceau est rompu et surveille les schémas de consommation. Si une bouteille est ouverte, refermée par un fraudeur et retourne en circulation de manière irrégulière, les algorithmes d'IA reconnaissent les écarts et notifient immédiatement le fabricant ou les autorités sanitaires.",
+                    answerSecondary: "Bien qu'il n'élimine pas 100% du risque de falsification à la consommation finale (à domicile), il empêche drastiquement la falsification à grande échelle dans la chaîne de distribution — là où le problème se produit réellement et cause des dommages significatifs."
+                },
+                q5: {
+                    question: "Les consommateurs peuvent-ils vérifier l'authenticité ?",
+                    answer: "Oui ! Les utilisateurs Android accèdent à www.facttag.info et les utilisateurs iPhone téléchargent notre application légère. Il suffit d'approcher le smartphone du bouchon (NFC). Le système affiche instantanément : authenticité du produit, date de fabrication, lot, historique des mouvements et informations supplémentaires sur le produit."
+                },
+                q6: {
+                    question: "Quel est l'impact réel de la contrefaçon ?",
+                    answerIntro: "L'industrie des boissons contrefaites représente environ 55 milliards de R$ par an rien qu'au Brésil, causant :",
+                    losses: "Des pertes massives aux fabricants légitimes",
+                    tax: "Des pertes de recettes fiscales",
+                    health: "Des risques graves pour la santé publique : les produits contrefaits contiennent souvent du méthanol et d'autres substances toxiques causant intoxications, cécité et même la mort",
+                    brand: "Des dommages irréparables à la réputation des marques établies",
+                    answerSummary: "Le coût de mise en œuvre du système est insignifiant comparé aux dommages causés par la contrefaçon."
+                },
+                q7: {
+                    question: "Combien coûte la mise en œuvre ?",
+                    answer: "Le coût par tag NFC varie selon le volume, mais se situe généralement entre 0,50 R$ et 2,00 R$ par unité à grande échelle. Les tags RFID pour cartons coûtent entre 0,30 R$ et 5,00 R$. Compte tenu de la perte estimée de 55 milliards de R$ due aux produits contrefaits, des risques pour la santé publique et des dommages à la marque, le retour sur investissement est généralement positif en 6-12 mois pour la plupart des fabricants."
+                },
+                q8: {
+                    question: "Est-ce infaillible à 100% ?",
+                    answer: "Aucun système ne l'est. Mais il est significativement plus robuste que toute solution disponible aujourd'hui. La combinaison de matériel unique (tags NFC/RFID), cryptage, traçabilité en temps réel et analyse par IA crée de multiples couches de protection qui rendent la contrefaçon extrêmement difficile et économiquement non viable pour les fraudeurs."
+                },
+                q9: {
+                    question: "Fonctionne-t-il hors ligne ?",
+                    answer: "Oui ! La vérification basique d'authenticité fonctionne hors ligne — vous pouvez scanner et confirmer qu'il existe un tag légitime correctement positionné. Cependant, pour accéder à l'historique complet des mouvements et vérifier les informations les plus récentes de la chaîne d'approvisionnement, une connexion Internet est nécessaire. Dès qu'il y a connexion, toutes les données se synchronisent automatiquement."
+                }
+            }
+        },
         aboutPage: {
             metaTitle: "À propos de nous - FACT",
             title: "À propos de nous",
@@ -591,6 +753,7 @@ const translations = {
         nav: {
             platform: "แพลตฟอร์ม",
             demo: "ลองเดโม่",
+            faq: "คำถามที่พบบ่อย",
             contact: "ติดต่อ",
             brandLogin: "เข้าสู่ระบบแบรนด์",
             scanNow: "สแกนตอนนี้"
@@ -649,6 +812,59 @@ const translations = {
             brands: { title: "สำหรับแบรนด์", description: "ปกป้องชื่อเสียง ลดความสูญเสียจากการปลอมแปลง และรับข้อมูลเชิงลึกที่มีค่าในห่วงโซ่อุปทาน" },
             governments: { title: "สำหรับรัฐบาล", description: "ต่อสู้กับการค้าที่ผิดกฎหมาย ปรับปรุงการจัดเก็บภาษี และยกระดับการคุ้มครองสาธารณสุข" },
             retailers: { title: "สำหรับผู้ค้าปลีก", description: "ตรวจสอบความสมบูรณ์ของสินค้าได้ทันทีและสร้างความเชื่อมั่นให้ลูกค้าด้วยสินค้าที่ผ่านการยืนยัน"
+            }
+        },
+        faq: {
+            metaTitle: "FAQ - ระบบติดตามอัจฉริยะ",
+            title: "FAQ - ระบบติดตามอัจฉริยะ",
+            backLink: "← กลับสู่หน้าหลัก",
+            questions: {
+                q1: {
+                    question: "ทำไมระบบนี้ดีกว่าวิธีป้องกันแบบเดิม?",
+                    answer: "โซลูชันแบบเดิมอย่างโฮโลแกรมหรือคิวอาร์โค้ดพิมพ์สามารถถูกทำซ้ำได้ง่าย แท็ก NFC มีรหัสเฉพาะและถูกเข้ารหัส — จึงไม่สามารถโคลนได้ ระบบบันทึกทุกเหตุการณ์ (การผลิต การกระจาย การเปิดซีล) เพื่อสร้างประวัติครบถ้วนและให้ AI ตรวจจับรูปแบบที่น่าสงสัยโดยอัตโนมัติ ในการตรวจสอบความแท้ ผู้ใช้ Android เข้าไปที่ www.facttag.info และผู้ใช้ iPhone ดาวน์โหลดแอปของเราที่มีขนาดเล็กและใช้งานง่าย"
+                },
+                q2: {
+                    question: "การสแกนทำงานอย่างไร ต้องทำแบบแมนนวลทีละขวดหรือไม่?",
+                    answer: "ไม่จำเป็นต้องสแกนแมนนวล กล่องสินค้ามีแท็ก RFID ที่อ่านได้ไกลถึง 10 เมตรผ่านประตูสแกนที่ติดตั้งไว้ในจุดสำคัญของห่วงโซ่อุปทาน (ออกจากโรงงาน เข้าสู่คลังของตัวแทนจำหน่าย จุดขาย) สำหรับลังที่ปิดผนึก 6 หรือ 12 ขวด เพียงผ่านประตู ระบบจะบันทึกทั้งหมดพร้อมกันผ่าน RFID การสแกนด้วยสมาร์ตโฟนก็ทำได้เมื่อจำเป็น โดยเฉพาะผู้บริโภคหรือร้านค้า"
+                },
+                q3: {
+                    question: "ถ้ามีคนเอาฝาขวดไปใช้กับสินค้าปลอมอีกจะทำอย่างไร?",
+                    answerIntro: "AI ของแพลตฟอร์มจะสร้างการแจ้งเตือนตามรูปแบบการบริโภค เช่น ปริมาณ โปรไฟล์ลูกค้า ระยะเวลาที่วางขาย เวลาเปิดซีล (หากใช้ FACT Tag Pro) และประเภทสินค้า ตัวอย่างเช่น:",
+                    barExample: "บาร์/คลับ: ระบบรู้ว่าร้านแห่งนี้ได้รับวิสกี้พรีเมียม 20 ขวดต่อสัปดาห์ หากพบฝาจากล็อตที่ส่งมาสามสัปดาห์ก่อนอยู่บนขวด \"ใหม่\" ระบบจะแจ้งเตือนทันที และถ้าขวดนั้นถูกบริโภคหมดใน 2 วัน (ปกติ 5-7 วัน) คำเตือนจะเข้มข้นขึ้น",
+                    supermarketExample: "ซูเปอร์มาร์เก็ต: เครือข่ายนี้รับวอดก้า 500 ขวดต่อเดือน หากฝาจากล็อตเก่าเริ่มหมุนเวียนผิดปกติ หรือเวลาระหว่างการส่งมอบกับการ \"ขาย\" ไม่สอดคล้องกับประวัติ ระบบจะตรวจจับได้ทันที",
+                    distributorExample: "ผู้จัดจำหน่าย: หากฝาเดียวกันหมุนเวียนระหว่างหลายจุดขายต่อเนื่อง หรือปรากฏในพื้นที่ที่ไม่อยู่ในช่องทางจัดจำหน่ายที่ได้รับอนุญาต อัลกอริทึมจะตรวจพบความผิดปกติ",
+                    analysisSummary: "ระบบจะครอสเช็กตำแหน่งทางภูมิศาสตร์ เวลาระหว่างธุรกรรม โปรไฟล์การบริโภคของสถานที่ และประวัติของล็อต เพื่อค้นหารูปแบบผิดปกติที่มนุษย์แทบมองไม่เห็น"
+                },
+                q4: {
+                    question: "ระบบป้องกันการดัดแปลงหลังเปิดขวดได้อย่างไร?",
+                    answerPrimary: "ระบบสามารถตรวจจับเวลาที่ซีลถูกเปิดและติดตามรูปแบบการบริโภค หากขวดถูกเปิด ปิดใหม่ แล้วกลับเข้าสู่ตลาดแบบผิดปกติ อัลกอริทึม AI จะระบุความเบี่ยงเบนและแจ้งผู้ผลิตหรือหน่วยงานสาธารณสุขทันที",
+                    answerSecondary: "แม้จะไม่สามารถป้องกันความเสี่ยงจากการดัดแปลงในขั้นตอนการบริโภคสุดท้าย (เช่น ที่บ้าน) ได้ 100% แต่ระบบช่วยลดการปลอมปนในห่วงโซ่การกระจายขนาดใหญ่ได้อย่างมาก ซึ่งเป็นจุดที่สร้างความเสียหายรุนแรง"
+                },
+                q5: {
+                    question: "ผู้บริโภคตรวจสอบความแท้ได้หรือไม่?",
+                    answer: "ได้แน่นอน! ผู้ใช้ Android เข้า www.facttag.info และผู้ใช้ iPhone ดาวน์โหลดแอปขนาดเล็กของเรา เพียงนำสมาร์ตโฟนไปแตะที่ฝา (NFC) ระบบจะแสดงความแท้จริง วันที่ผลิต ล็อต ประวัติการเคลื่อนไหว และข้อมูลสินค้าเพิ่มเติมทันที"
+                },
+                q6: {
+                    question: "ผลกระทบของสินค้าปลอมรุนแรงแค่ไหน?",
+                    answerIntro: "อุตสาหกรรมเครื่องดื่มปลอมมีมูลค่าราว 55 พันล้านเรียลต่อปีในบราซิลเพียงประเทศเดียว ส่งผลให้:",
+                    losses: "ผู้ผลิตที่ถูกต้องตามกฎหมายสูญเสียรายได้มหาศาล",
+                    tax: "รัฐสูญเสียรายได้จากภาษี",
+                    health: "เกิดความเสี่ยงร้ายแรงต่อสาธารณสุข: สินค้าปลอมมักมีเมทานอลและสารพิษอื่น ๆ ทำให้เกิดพิษ ตาบอด หรือเสียชีวิต",
+                    brand: "ชื่อเสียงของแบรนด์ที่สั่งสมมายาวนานเสียหายอย่างไม่อาจกู้คืน",
+                    answerSummary: "ต้นทุนการติดตั้งระบบต่ำมากเมื่อเทียบกับความเสียหายที่เกิดจากการปลอมแปลง"
+                },
+                q7: {
+                    question: "ค่าใช้จ่ายในการติดตั้งเท่าไหร่?",
+                    answer: "ต้นทุนแท็ก NFC ขึ้นอยู่กับปริมาณ แต่โดยทั่วไปอยู่ที่ R$0.50 ถึง R$2.00 ต่อชิ้นเมื่อผลิตในปริมาณมาก แท็ก RFID สำหรับกล่องมีราคา R$0.30 ถึง R$5.00 เมื่อเทียบกับความเสียหายประมาณ 55 พันล้านเรียล ความเสี่ยงด้านสาธารณสุข และผลกระทบต่อแบรนด์ ส่วนใหญ่จะได้ ROI เป็นบวกภายใน 6-12 เดือน"
+                },
+                q8: {
+                    question: "ระบบนี้สมบูรณ์แบบ 100% หรือไม่?",
+                    answer: "ไม่มีระบบใดสมบูรณ์แบบ 100% แต่โซลูชันนี้แข็งแกร่งกว่าวิธีอื่นในปัจจุบันมาก การผสมผสานฮาร์ดแวร์เฉพาะ (แท็ก NFC/RFID) การเข้ารหัส การติดตามแบบเรียลไทม์ และการวิเคราะห์ด้วย AI ช่วยสร้างชั้นการป้องกันหลายระดับ ทำให้การปลอมแปลงทำได้ยากและไม่คุ้มค่า"
+                },
+                q9: {
+                    question: "ใช้งานแบบออฟไลน์ได้ไหม?",
+                    answer: "ได้! การตรวจสอบความแท้ขั้นพื้นฐานทำงานแบบออฟไลน์ — คุณสามารถสแกนเพื่อยืนยันว่าแท็กของแท้ถูกติดตั้งอย่างถูกต้อง แต่หากต้องการดูประวัติการเคลื่อนไหวทั้งหมดและข้อมูลล่าสุดของห่วงโซ่อุปทาน ต้องเชื่อมต่ออินเทอร์เน็ต เมื่อกลับมาออนไลน์ ระบบจะซิงค์ข้อมูลโดยอัตโนมัติ"
+                }
             }
         },
         aboutPage: {
