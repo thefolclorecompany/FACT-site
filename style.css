@@ -64,23 +64,36 @@ nav {
 .nav-cta {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
+}
+
+.nav-cta .btn {
+    margin: 0;
 }
 
 .nav-cta .login-link {
     color: var(--text-light);
-    opacity: 0.8;
-    font-weight: 500;
+    opacity: 0.9;
+    font-weight: 600;
     text-decoration: none;
-    padding: 0.25rem 0.5rem;
-    border-radius: 6px;
-    transition: opacity 0.2s ease, color 0.2s ease, background 0.2s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
 }
 
 .nav-cta .login-link:hover {
     opacity: 1;
     color: var(--highlight);
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
 .nav-links a {
@@ -197,8 +210,14 @@ nav {
 
 .cta-buttons {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     animation: fadeInUp 0.8s ease 0.4s both;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.cta-buttons .btn {
+    flex: 0 0 auto;
 }
 
 .btn {
@@ -232,6 +251,89 @@ nav {
 .btn-secondary:hover {
     background: var(--highlight);
     color: var(--primary);
+}
+
+.btn-scan {
+    background: linear-gradient(135deg, var(--success) 0%, #00e677 100%);
+    color: var(--primary);
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.25);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: scanPulse 3s ease-in-out infinite;
+}
+
+.btn-scan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-scan:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 255, 136, 0.4);
+    background: linear-gradient(135deg, #00e677 0%, var(--success) 100%);
+}
+
+.btn-scan:hover::before {
+    left: 100%;
+}
+
+.btn-scan:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 20px rgba(0, 255, 136, 0.3);
+}
+
+.btn-scan-hero {
+    background: linear-gradient(135deg, var(--success) 0%, #00e677 100%);
+    color: var(--primary);
+    box-shadow: 0 12px 35px rgba(0, 255, 136, 0.3);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 1.3rem 3rem;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: scanHeroPulse 4s ease-in-out infinite;
+}
+
+.btn-scan-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.btn-scan-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 45px rgba(0, 255, 136, 0.5);
+    background: linear-gradient(135deg, #00e677 0%, var(--success) 100%);
+}
+
+.btn-scan-hero:hover::before {
+    left: 100%;
+}
+
+.btn-scan-hero:active {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
 }
 
 .hero-visual {
@@ -532,6 +634,24 @@ footer {
     to { top: 100%; }
 }
 
+@keyframes scanPulse {
+    0%, 100% { 
+        box-shadow: 0 8px 25px rgba(0, 255, 136, 0.25);
+    }
+    50% { 
+        box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4), 0 0 20px rgba(0, 255, 136, 0.3);
+    }
+}
+
+@keyframes scanHeroPulse {
+    0%, 100% { 
+        box-shadow: 0 12px 35px rgba(0, 255, 136, 0.3);
+    }
+    50% { 
+        box-shadow: 0 12px 35px rgba(0, 255, 136, 0.5), 0 0 25px rgba(0, 255, 136, 0.4);
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .mission-banner {
@@ -558,7 +678,27 @@ footer {
     .cta-buttons {
         flex-direction: column;
         align-items: stretch;
-        gap: 0.75rem;
+        gap: 1rem;
+    }
+
+    .btn-scan-hero {
+        font-size: 1rem;
+        padding: 1.1rem 2.2rem;
+        letter-spacing: 0.8px;
+    }
+
+    .nav-cta {
+        gap: 0.8rem;
+    }
+
+    .nav-cta .login-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .btn-scan {
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
     }
 
     .nav-links {

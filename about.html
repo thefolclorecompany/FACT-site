@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - FACT</title>
+    <title data-translate="aboutPage.metaTitle">About Us - FACT</title>
     <link rel="stylesheet" href="style.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRQ51E961B"></script>
@@ -14,11 +14,12 @@
 
         gtag('config', 'G-VRQ51E961B');
     </script>
+    <script src="translations.js"></script>
     </head>
 <body>
     <main class="container">
-        <h1>About Us</h1>
-        <p>
+        <h1 data-translate="aboutPage.title">About Us</h1>
+        <p data-translate="aboutPage.intro">
             FACT (Foundation Against Counterfeit Trade) is a coalition of technologists, policy experts,
             investigators, and brand partners committed to stopping counterfeit goods from reaching
             consumers. We combine modern supply-chain intelligence with cooperative enforcement to build
@@ -26,53 +27,75 @@
         </p>
 
         <section class="content-section">
-            <h2>Our Mission</h2>
-            <p>
-                We exist to make authenticity the default expectation wherever people shop. By connecting
-                brands, marketplaces, and regulators with real-time insights, FACT helps legitimate products
-                move freely while shutting down the networks that enable counterfeiting.
-            </p>
+            <div class="content-container">
+                <h2 data-translate="aboutPage.missionTitle">Our Mission</h2>
+                <p data-translate="aboutPage.missionBody">
+                    We exist to make authenticity the default expectation wherever people shop. By connecting
+                    brands, marketplaces, and regulators with real-time insights, FACT helps legitimate products
+                    move freely while shutting down the networks that enable counterfeiting.
+                </p>
+            </div>
         </section>
 
         <section class="content-section">
-            <h2>How We Work</h2>
-            <p>We take a multi-layered approach to protecting consumers and safeguarding brands:</p>
-            <ul>
-                <li><strong>Intelligence:</strong> We monitor supply-chain signals and online listings to identify suspicious activity before it spreads.</li>
-                <li><strong>Collaboration:</strong> We connect manufacturers, retailers, and law enforcement partners to coordinate swift action.</li>
-                <li><strong>Education:</strong> We equip consumers and frontline teams with the tools to recognize and report counterfeit goods.</li>
-            </ul>
+            <div class="content-container">
+                <h2 data-translate="aboutPage.howTitle">How We Work</h2>
+                <p data-translate="aboutPage.howIntro">We take a multi-layered approach to protecting consumers and safeguarding brands:</p>
+                <ul>
+                    <li>
+                        <strong data-translate="aboutPage.howItems.intelligenceTitle">Intelligence:</strong>
+                        <span data-translate="aboutPage.howItems.intelligenceBody">We monitor supply-chain signals and online listings to identify suspicious activity before it spreads.</span>
+                    </li>
+                    <li>
+                        <strong data-translate="aboutPage.howItems.collaborationTitle">Collaboration:</strong>
+                        <span data-translate="aboutPage.howItems.collaborationBody">We connect manufacturers, retailers, and law enforcement partners to coordinate swift action.</span>
+                    </li>
+                    <li>
+                        <strong data-translate="aboutPage.howItems.educationTitle">Education:</strong>
+                        <span data-translate="aboutPage.howItems.educationBody">We equip consumers and frontline teams with the tools to recognize and report counterfeit goods.</span>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section class="content-section">
-            <h2>Impact</h2>
-            <p>
-                Our team has helped brands protect their IP portfolios, recover lost revenue, and restore
-                confidence among their customers. Every investigation strengthens our shared intelligence
-                network, creating a ripple effect that keeps counterfeit products off shelves and out of
-                homes.
-            </p>
+            <div class="content-container">
+                <h2 data-translate="aboutPage.impactTitle">Impact</h2>
+                <p data-translate="aboutPage.impactBody">
+                    Our team has helped brands protect their IP portfolios, recover lost revenue, and restore
+                    confidence among their customers. Every investigation strengthens our shared intelligence
+                    network, creating a ripple effect that keeps counterfeit products off shelves and out of
+                    homes.
+                </p>
+            </div>
         </section>
 
         <section class="content-section">
-            <h2>Who We Are</h2>
-            <p>
-                FACT brings together specialists in data science, legal policy, logistics, and consumer
-                advocacy. We actively partner with NGOs, trade associations, and public agencies to ensure
-                communities around the world benefit from safer commerce.
-            </p>
+            <div class="content-container">
+                <h2 data-translate="aboutPage.teamTitle">Who We Are</h2>
+                <p data-translate="aboutPage.teamBody">
+                    FACT brings together specialists in data science, legal policy, logistics, and consumer
+                    advocacy. We actively partner with NGOs, trade associations, and public agencies to ensure
+                    communities around the world benefit from safer commerce.
+                </p>
+            </div>
         </section>
 
         <section class="content-section">
-            <h2>Join the Effort</h2>
-            <p>
-                Counterfeit trade adapts quickly, so our defenses must evolve even faster. If you are a brand
-                owner, marketplace operator, or consumer advocate interested in collaborating with FACT,
-                please reach out through our <a href="contact.html">contact page</a>.
-            </p>
+            <div class="content-container">
+                <h2 data-translate="aboutPage.joinTitle">Join the Effort</h2>
+                <p data-translate="aboutPage.joinBody1">
+                    Counterfeit trade adapts quickly, so our defenses must evolve even faster.
+                </p>
+                <p>
+                    <span data-translate="aboutPage.joinBody2">If you are a brand owner, marketplace operator, or consumer advocate interested in collaborating with FACT, please reach out through our </span>
+                    <a href="contact.html" data-translate="aboutPage.contactLinkLabel">contact page</a>
+                    <span data-translate="aboutPage.joinBody3"> to start the conversation.</span>
+                </p>
+            </div>
         </section>
 
-        <a class="back" href="index.html">← Back to Home</a>
+        <a class="back" href="index.html" data-translate="aboutPage.backLink">← Back to Home</a>
     </main>
     <script src="script.js"></script>
 </body>

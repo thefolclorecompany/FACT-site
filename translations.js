@@ -7,13 +7,16 @@ const translations = {
         nav: {
             platform: "Platform",
             demo: "Try Demo",
-            contact: "Contact"
+            contact: "Contact",
+            brandLogin: "Brand LOGIN",
+            scanNow: "SCAN NOW"
         },
         hero: {
             title: "Verify Authenticity with a Simple Tap",
             subtitle: "Combat counterfeit alcohol with blockchain-verified NFC technology. Protect consumers, brands, and governments with instant authentication.",
             learnMore: "Learn More",
             getStarted: "Get Started",
+            scanNow: "SCAN NOW",
             verified: "✓ Verified Authentic"
         },
         mission: {
@@ -158,6 +161,33 @@ const translations = {
             hoursAgo: "hr ago",
             daysAgo: "days ago"
         },
+        aboutPage: {
+            metaTitle: "About Us - FACT",
+            title: "About Us",
+            intro: "FACT (Foundation Against Counterfeit Trade) is a coalition of technologists, policy experts, investigators, and brand partners committed to stopping counterfeit goods from reaching consumers. We combine modern supply-chain intelligence with cooperative enforcement to build trust in the global marketplace.",
+            missionTitle: "Our Mission",
+            missionBody: "We exist to make authenticity the default expectation wherever people shop. By connecting brands, marketplaces, and regulators with real-time insights, FACT helps legitimate products move freely while shutting down the networks that enable counterfeiting.",
+            howTitle: "How We Work",
+            howIntro: "We take a multi-layered approach to protecting consumers and safeguarding brands:",
+            howItems: {
+                intelligenceTitle: "Intelligence:",
+                intelligenceBody: "We monitor supply-chain signals and online listings to identify suspicious activity before it spreads.",
+                collaborationTitle: "Collaboration:",
+                collaborationBody: "We connect manufacturers, retailers, and law enforcement partners to coordinate swift action.",
+                educationTitle: "Education:",
+                educationBody: "We equip consumers and frontline teams with the tools to recognize and report counterfeit goods."
+            },
+            impactTitle: "Impact",
+            impactBody: "Our team has helped brands protect their IP portfolios, recover lost revenue, and restore confidence among their customers. Every investigation strengthens our shared intelligence network, creating a ripple effect that keeps counterfeit products off shelves and out of homes.",
+            teamTitle: "Who We Are",
+            teamBody: "FACT brings together specialists in data science, legal policy, logistics, and consumer advocacy. We actively partner with NGOs, trade associations, and public agencies to ensure communities around the world benefit from safer commerce.",
+            joinTitle: "Join the Effort",
+            joinBody1: "Counterfeit trade adapts quickly, so our defenses must evolve even faster.",
+            joinBody2: "If you are a brand owner, marketplace operator, or consumer advocate interested in collaborating with FACT, please reach out through our ",
+            contactLinkLabel: "contact page",
+            joinBody3: " to start the conversation.",
+            backLink: "← Back to Home"
+        },
         pressRelease: {
             forImmediateRelease: "FOR IMMEDIATE RELEASE",
             date: "Date:",
@@ -218,13 +248,16 @@ const translations = {
         nav: {
             platform: "Plataforma",
             demo: "Experimente o Demo",
-            contact: "Contato"
+            contact: "Contato",
+            brandLogin: "Login",
+            scanNow: "ESCANEAR FACTTAG"
         },
         hero: {
             title: "Verifique a Autenticidade com um Toque",
             subtitle: "Combata o álcool falsificado com tecnologia NFC verificada por blockchain. Proteja consumidores, marcas e governos com autenticação instantânea.",
             learnMore: "Saiba Mais",
             getStarted: "Começar",
+            scanNow: "Escanear FACT Tag",
             verified: "✓ Autenticado"
         },
         mission: {
@@ -369,6 +402,33 @@ const translations = {
             hoursAgo: "h atrás",
             daysAgo: "dias atrás"
         },
+        aboutPage: {
+            metaTitle: "Sobre Nós - FACT",
+            title: "Sobre Nós",
+            intro: "A FACT (Fundação de Autenticação e Certificação de Transparencia) é uma coalizão de tecnólogos, especialistas  e parceiros de marcas comprometidos em impedir que produtos falsificados cheguem aos consumidores. Combinamos inteligência moderna de cadeia de suprimentos com atuação cooperativa para construir confiança no mercado global.",
+            missionTitle: "Nossa Missão",
+            missionBody: "Existimos para fazer da autenticidade a expectativa padrão onde quer que as pessoas comprem. Ao conectar marcas, marketplaces e reguladores com insights em tempo real, a FACT ajuda produtos legítimos a circularem livremente enquanto desativa as redes que permitem a falsificação.",
+            howTitle: "Como Atuamos",
+            howIntro: "Adotamos uma abordagem em várias camadas para proteger consumidores e salvaguardar marcas:",
+            howItems: {
+                intelligenceTitle: "Inteligência:",
+                intelligenceBody: "Monitoramos sinais da cadeia de suprimentos e anúncios on-line para identificar atividades suspeitas antes que elas se espalhem.",
+                collaborationTitle: "Colaboração:",
+                collaborationBody: "Conectamos fabricantes, varejistas e parceiros de aplicação da lei para coordenar ações rápidas.",
+                educationTitle: "Educação:",
+                educationBody: "Capacitamos consumidores e equipes na linha de frente com ferramentas para reconhecer e reportar produtos falsificados."
+            },
+            impactTitle: "Impacto",
+            impactBody: "Nossa equipe tem ajudado marcas a proteger seus portfólios de propriedade intelectual, recuperar receitas perdidas e restaurar a confiança de seus clientes. Cada investigação fortalece nossa rede de inteligência compartilhada, criando um efeito cascata que mantém produtos falsificados fora das prateleiras e dos lares.",
+            teamTitle: "Quem Somos",
+            teamBody: "A FACT reúne especialistas em ciência de dados, política pública, logística e defesa do consumidor. Atuamos em parceria com ONGs, associações comerciais e órgãos públicos para garantir que comunidades ao redor do mundo se beneficiem de um comércio mais seguro.",
+            joinTitle: "Participe",
+            joinBody1: "O comércio de falsificações evolui rápido, então nossas defesas precisam evoluir ainda mais rapidamente.",
+            joinBody2: "Se você é um detentor de marca, operador de marketplace ou defensor do consumidor interessado em colaborar com a FACT, entre em contato pela nossa ",
+            contactLinkLabel: "página de contato",
+            joinBody3: " para iniciar a conversa.",
+            backLink: "← Voltar para a página inicial"
+        },
         pressRelease: {
             forImmediateRelease: "PARA DIVULGAÇÃO IMEDIATA",
             date: "Data:",
@@ -377,7 +437,7 @@ const translations = {
             title: "Crise do Metanol no Brasil: Uma Tragédia Evitável Que Exige Ação Imediata",
             subtitle: "Tecnologia de Autenticação Patenteada da FACT, Protegendo Consumidores com Sucesso Desde 2019, Oferece Solução Imediata para Combater Crise de Álcool Falsificado Que Tirou Vidas e Paralisou a Indústria de Bebidas do Brasil",
             location: "SÃO PAULO, BRASIL — 6 de Outubro de 2025",
-            paragraph1: "Enquanto o Brasil enfrenta uma devastadora crise de envenenamento por metanol que deixou pelo menos uma pessoa morta, 11 mortes sob investigação e mais de 100 casos suspeitos em vários estados, a Fundação Contra o Comércio de Falsificações (FACT) está pedindo a adoção urgente em toda a indústria de tecnologia de autenticação comprovada que poderia ter evitado esta catástrofe de saúde pública.",
+            paragraph1: "Enquanto o Brasil enfrenta uma devastadora crise de envenenamento por metanol que deixou pelo menos uma pessoa morta, 11 mortes sob investigação e mais de 100 casos suspeitos em vários estados, a Fundação de Autenticação e Certificação de Transparencia (FACT) está pedindo a adoção urgente em toda a indústria de tecnologia de autenticação comprovada que poderia ter evitado esta catástrofe de saúde pública.",
             suspectedCases: "Casos Suspeitos",
             deathsConfirmed: "Mortes Confirmadas ou Sob Investigação",
             revenueDrop: "Queda de Receita em Bebidas Destiladas",
@@ -412,7 +472,7 @@ const translations = {
             paragraph9: "\"Isso não é sobre nossa empresa\", enfatiza Boavista. \"Isso é sobre estabelecer um padrão de segurança fundamental que deveria ser inegociável: os consumidores devem poder verificar com certeza absoluta que o álcool que estão bebendo é genuíno. Em 2025, em um país com penetração quase universal de smartphones, não há desculpa para mortes evitáveis por álcool falsificado.\"",
             paragraph10: "A questão que enfrenta a indústria de bebidas, reguladores e consumidores do Brasil não é mais se tal tecnologia deve ser adotada — mas quão rapidamente ela pode ser implementada antes que mais vidas sejam perdidas.",
             aboutTitle: "Sobre a FACT",
-            aboutParagraph1: "A Fundação Contra o Comércio de Falsificações (FACT) foi estabelecida em 2019 por Nick Walker e Guilherme Boavista em resposta à ameaça persistente de álcool falsificado no Brasil e no Sudeste Asiático. O sistema de autenticação NFC verificado por blockchain patenteado da FACT (Patente US20210391993A1) protegeu cada garrafa de Cãna Cachaça desde o seu início, com zero incidentes de falsificação em seis anos de implantação.",
+            aboutParagraph1: "A Fundação de Autenticação e Certificação de Transparencia (FACT) foi estabelecida em 2019 por Nick Walker e Guilherme Boavista em resposta à ameaça persistente de álcool falsificado no Brasil e no Sudeste Asiático. O sistema de autenticação NFC verificado por blockchain patenteado da FACT (Patente US20210391993A1) protegeu cada garrafa de Cãna Cachaça desde o seu início, com zero incidentes de falsificação em seis anos de implantação.",
             aboutParagraph2: "A missão da FACT é estabelecer a verificação de autenticação como um padrão fundamental de segurança do consumidor no mercado global de álcool, tornando a verificação de produtos tão simples quanto tocar um smartphone. A tecnologia da empresa combina selos físicos à prova de violação com autenticação criptográfica e verificação com suporte de blockchain para criar uma cadeia de confiança inquebrável da produção ao consumo.",
             mediaContactTitle: "Contato para Imprensa e Consultas de Parceria",
             email: "E-mail:",
@@ -423,19 +483,22 @@ const translations = {
     },
     fr: {
         meta: {
-            title: "FACT - Fondation Contre le Commerce de Contrefaçons",
-            copyright: "© 2024 Fondation Contre le Commerce de Contrefaçons. Construire un marché mondial de l'alcool plus sûr et plus responsable."
+            title: "FACT - Fondation d’Authentification et de Certification contre le Trafic de Contrefaçons.",
+            copyright: "© 2024 Fondation d’Authentification et de Certification contre le Trafic de Contrefaçons.. Construire un marché mondial de l'alcool plus sûr et plus responsable."
         },
         nav: {
             platform: "Plateforme",
             demo: "Essayer la démo",
-            contact: "Contact"
+            contact: "Contact",
+            brandLogin: "Login",
+            scanNow: "Scanner FACT Tag"
         },
         hero: {
             title: "Vérifiez l'authenticité en un simple geste",
             subtitle: "Luttez contre l'alcool contrefait avec la technologie NFC vérifiée par blockchain. Protégez les consommateurs, les marques et les gouvernements avec une authentification instantanée.",
             learnMore: "En savoir plus",
             getStarted: "Commencer",
+            scanNow: "Scanner FACT Tag",
             verified: "✓ Authentifié"
         },
         mission: {
@@ -484,13 +547,40 @@ const translations = {
             governments: { title: "Pour les gouvernements", description: "Luttez contre le commerce illicite, améliorez la conformité fiscale et renforcez la santé publique." },
             retailers: { title: "Pour les détaillants", description: "Vérifiez instantanément l'intégrité des stocks et renforcez la confiance des clients grâce à des produits authentifiés." }
         },
+        aboutPage: {
+            metaTitle: "À propos de nous - FACT",
+            title: "À propos de nous",
+            intro: "FACT (Fondation d’Authentification et de Certification contre le Trafic de Contrefaçons.) est une coalition de technologues, d'experts en politiques publiques, d'enquêteurs et de partenaires de marques déterminés à empêcher les produits contrefaits d'atteindre les consommateurs. Nous combinons une intelligence moderne de la chaîne d'approvisionnement avec une application coopérative pour instaurer la confiance sur le marché mondial.",
+            missionTitle: "Notre mission",
+            missionBody: "Nous voulons faire de l'authenticité l'attente par défaut partout où les gens achètent. En reliant marques, places de marché et régulateurs à des informations en temps réel, FACT aide les produits légitimes à circuler librement tout en démantelant les réseaux qui alimentent la contrefaçon.",
+            howTitle: "Notre approche",
+            howIntro: "Nous adoptons une approche à plusieurs niveaux pour protéger les consommateurs et sécuriser les marques :",
+            howItems: {
+                intelligenceTitle: "Veille :",
+                intelligenceBody: "Nous surveillons les signaux de la chaîne d'approvisionnement et les annonces en ligne pour repérer les activités suspectes avant qu'elles ne se propagent.",
+                collaborationTitle: "Collaboration :",
+                collaborationBody: "Nous connectons fabricants, détaillants et forces de l'ordre afin de coordonner des actions rapides.",
+                educationTitle: "Sensibilisation :",
+                educationBody: "Nous donnons aux consommateurs et aux équipes de terrain les outils pour reconnaître et signaler les produits contrefaits."
+            },
+            impactTitle: "Impact",
+            impactBody: "Notre équipe a aidé les marques à protéger leurs portefeuilles de propriété intellectuelle, à récupérer des revenus perdus et à restaurer la confiance de leurs clients. Chaque enquête renforce notre réseau d'intelligence partagée, créant un effet domino qui maintient les produits contrefaits hors des rayons et des foyers.",
+            teamTitle: "Qui nous sommes",
+            teamBody: "FACT réunit des spécialistes en science des données, en politique publique, en logistique et en défense des consommateurs. Nous collaborons avec des ONG, des associations professionnelles et des organismes publics pour garantir des échanges plus sûrs partout dans le monde.",
+            joinTitle: "Rejoindre l'action",
+            joinBody1: "Le commerce de la contrefaçon évolue vite, nos défenses doivent aller encore plus vite.",
+            joinBody2: "Si vous êtes un propriétaire de marque, un opérateur de marketplace ou un défenseur des consommateurs souhaitant collaborer avec FACT, contactez-nous via notre ",
+            contactLinkLabel: "page de contact",
+            joinBody3: " pour entamer la discussion.",
+            backLink: "← Retour à l'accueil"
+        },
         footer: {
             title: "Rejoignez la lutte contre le commerce de contrefaçons",
             subtitle: "Partenaire de FACT pour établir une nouvelle norme où la vérification d'authenticité est à portée de main.",
             contactUs: "Contactez-nous dès aujourd'hui",
             patentPrefix: "Propulsé par la dernière technologie cryptographique. Brevet :",
             patentLinkLabel: "US20210391993A1",
-            copyright: "© 2024 Fondation Contre le Commerce de Contrefaçons. Construire un marché mondial de l'alcool plus sûr et plus responsable."
+            copyright: "© 2024 Fondation d’Authentification et de Certification contre le Trafic de Contrefaçons.. Construire un marché mondial de l'alcool plus sûr et plus responsable."
         }
     },
     th: {
@@ -501,13 +591,16 @@ const translations = {
         nav: {
             platform: "แพลตฟอร์ม",
             demo: "ลองเดโม่",
-            contact: "ติดต่อ"
+            contact: "ติดต่อ",
+            brandLogin: "เข้าสู่ระบบแบรนด์",
+            scanNow: "สแกนตอนนี้"
         },
         hero: {
             title: "ยืนยันความแท้ด้วยการแตะเพียงครั้งเดียว",
             subtitle: "ต่อสู้กับเครื่องดื่มแอลกอฮอล์ปลอมด้วยเทคโนโลยี NFC ที่ยืนยันโดยบล็อกเชน ปกป้องผู้บริโภค แบรนด์ และรัฐบาลด้วยการยืนยันแบบทันที",
             learnMore: "ดูเพิ่มเติม",
             getStarted: "เริ่มต้น",
+            scanNow: "สแกนตอนนี้",
             verified: "✓ ผ่านการยืนยัน"
         },
         mission: {
@@ -557,6 +650,33 @@ const translations = {
             governments: { title: "สำหรับรัฐบาล", description: "ต่อสู้กับการค้าที่ผิดกฎหมาย ปรับปรุงการจัดเก็บภาษี และยกระดับการคุ้มครองสาธารณสุข" },
             retailers: { title: "สำหรับผู้ค้าปลีก", description: "ตรวจสอบความสมบูรณ์ของสินค้าได้ทันทีและสร้างความเชื่อมั่นให้ลูกค้าด้วยสินค้าที่ผ่านการยืนยัน"
             }
+        },
+        aboutPage: {
+            metaTitle: "เกี่ยวกับเรา - FACT",
+            title: "เกี่ยวกับเรา",
+            intro: "FACT (มูลนิธิต่อต้านการค้าสินค้าปลอม) เป็นพันธมิตรของผู้เชี่ยวชาญด้านเทคโนโลยี ผู้กำหนดนโยบาย นักสืบ และพันธมิตรแบรนด์ที่มุ่งหยุดยั้งสินค้าปลอมไม่ให้ถึงมือผู้บริโภค เราผสานข่าวกรองห่วงโซ่อุปทานสมัยใหม่เข้ากับการบังคับใช้แบบร่วมมือเพื่อสร้างความเชื่อมั่นในตลาดโลก",
+            missionTitle: "พันธกิจของเรา",
+            missionBody: "เราตั้งใจทำให้ความแท้เป็นความคาดหวังพื้นฐานในทุกที่ที่ผู้คนจับจ่าย โดยเชื่อมโยงแบรนด์ มาร์เก็ตเพลส และหน่วยงานกำกับดูแลเข้ากับข้อมูลเชิงลึกแบบเรียลไทม์ FACT ช่วยให้สินค้าที่ถูกต้องตามกฎหมายเคลื่อนย้ายได้อย่างราบรื่น พร้อมยุติเครือข่ายที่สนับสนุนการปลอมแปลง",
+            howTitle: "วิธีการทำงานของเรา",
+            howIntro: "เราดำเนินมาตรการหลายชั้นเพื่อคุ้มครองผู้บริโภคและปกป้องแบรนด์:",
+            howItems: {
+                intelligenceTitle: "ข่าวกรอง:",
+                intelligenceBody: "เราติดตามสัญญาณในห่วงโซ่อุปทานและรายชื่อสินค้าออนไลน์เพื่อค้นหากิจกรรมที่น่าสงสัยก่อนจะลุกลาม",
+                collaborationTitle: "ความร่วมมือ:",
+                collaborationBody: "เราประสานผู้ผลิต ผู้ค้าปลีก และหน่วยงานบังคับใช้กฎหมายเพื่อดำเนินการอย่างรวดเร็ว",
+                educationTitle: "การให้ความรู้:",
+                educationBody: "เราให้เครื่องมือแก่ผู้บริโภคและทีมแนวหน้าในการสังเกตและรายงานสินค้าปลอม"
+            },
+            impactTitle: "ผลกระทบ",
+            impactBody: "ทีมของเราช่วยให้แบรนด์ปกป้องทรัพย์สินทางปัญญา กู้คืนรายได้ที่สูญเสีย และฟื้นความเชื่อมั่นของลูกค้า ทุกการสืบสวนเสริมความแข็งแกร่งให้เครือข่ายข้อมูลร่วม สร้างผลต่อเนื่องที่กันสินค้าปลอมออกจากชั้นวางและบ้านเรือน",
+            teamTitle: "ทีมของเรา",
+            teamBody: "FACT รวมผู้เชี่ยวชาญด้านวิทยาการข้อมูล นโยบายสาธารณะ โลจิสติกส์ และการคุ้มครองผู้บริโภค เราร่วมมือกับองค์กรไม่แสวงหาผลกำไร สมาคมการค้า และหน่วยงานรัฐ เพื่อให้ชุมชนทั่วโลกได้ค้าขายอย่างปลอดภัยขึ้น",
+            joinTitle: "ร่วมขับเคลื่อน",
+            joinBody1: "การค้าสินค้าปลอมพัฒนาอย่างรวดเร็ว ดังนั้นการป้องกันของเราต้องก้าวให้เร็วยิ่งกว่า",
+            joinBody2: "หากคุณเป็นเจ้าของแบรนด์ ผู้ดำเนินมาร์เก็ตเพลส หรือผู้พิทักษ์ผู้บริโภคที่ต้องการร่วมงานกับ FACT โปรดติดต่อผ่าน ",
+            contactLinkLabel: "หน้าติดต่อ",
+            joinBody3: " เพื่อเริ่มการสนทนา",
+            backLink: "← กลับสู่หน้าหลัก"
         },
         footer: {
             title: "เข้าร่วมการต่อสู้กับการค้าสินค้าปลอม",

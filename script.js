@@ -112,12 +112,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Add scroll effect to navigation
 window.addEventListener('scroll', function() {
     const nav = document.querySelector('nav');
-    if (window.scrollY > 100) {
-        nav.style.background = 'rgba(0, 0, 0, 0.98)';
-        nav.style.boxShadow = '0 5px 20px rgba(255,255,255,0.1)';
-    } else {
-        nav.style.background = 'rgba(0, 0, 0, 0.95)';
-        nav.style.boxShadow = 'none';
+    if (nav) {
+        if (window.scrollY > 100) {
+            nav.style.background = 'rgba(0, 0, 0, 0.98)';
+            nav.style.boxShadow = '0 5px 20px rgba(255,255,255,0.1)';
+        } else {
+            nav.style.background = 'rgba(0, 0, 0, 0.95)';
+            nav.style.boxShadow = 'none';
+        }
     }
 });
 
@@ -143,10 +145,12 @@ document.querySelectorAll('.feature-card, .benefit-card, .step').forEach(el => {
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("active");
-});
+if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    });
+}
 
 // Demo tab switching within standalone page
 document.querySelectorAll('.demo-tab').forEach(tab => {
