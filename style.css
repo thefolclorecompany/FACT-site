@@ -23,27 +23,12 @@ body {
     overflow-x: hidden;
 }
 
-/* AWS Outage Banner */
-.aws-outage-banner {
-    background: #ffd700;
-    color: #000;
-    text-align: center;
-    padding: 0.75rem 1rem;
-    font-weight: 600;
-    font-size: 0.9rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1001;
-    border-bottom: 2px solid #ffed4e;
-    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
-}
+/* Mission Banner removed */
 
 /* Navigation */
 nav {
     position: fixed;
-    top: 3rem; /* Adjusted for banner height */
+    top: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
@@ -195,7 +180,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 11rem 2rem 4rem; /* Adjusted for banner + nav */
+    padding: 8rem 2rem 4rem;
     position: relative;
 }
 
@@ -934,11 +919,11 @@ footer {
         padding: 0.5rem 0;
     }
 
-    /* Nav positioning on mobile with banner */
-    nav { top: 3rem; }
+    /* Nav at top on mobile after removing banner */
+    nav { top: 0; }
 
     .hero {
-        padding: 9.5rem 1.25rem 3rem; /* Adjusted for banner + nav on mobile */
+        padding: 6.5rem 1.25rem 3rem;
     }
 
     .hero-content {
